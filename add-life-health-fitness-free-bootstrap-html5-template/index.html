@@ -112,10 +112,21 @@
                             <button type="button" class="btn next-btn" onclick="nextStep(3)">Next </button>
                         </div>
                     </div>
-      
+                    <!-- Step 4: Phone Number -->
+                        <div class="form-step" id="step4">
+                            <h1>📱 <strong>Enter Your Phone Number</strong></h1>
+                            <input type="tel" name="phone" id="phoneNumber" placeholder="e.g., 9876543210" required 
+                                    pattern="[0-9]{10}" 
+                                    style="padding:10px; font-size:16px; width: 90%; margin-bottom: 20px; border-radius: 6px; border: 1px solid #ccc;">
+                            
+                            <div style="text-align:center;">
+                                <button type="button" class="btn prev-btn" onclick="prevStep(4)">Prev</button>
+                                <button type="button" class="btn next-btn" onclick="validatePhone()">Next</button>
+                            </div>
+                        </div>
                     <!-- Final Submit -->
                     <div class="form-step" id="submitStep">
-                        <button type="button" class="btn prev-btn" onclick="prevStep(4)">Prev </button>
+                        <button type="button" class="btn prev-btn" onclick="prevStep(5)">Prev </button>
                         <button type="submit" class="btn">🚀 Submit</button>
                     </div>
                 </form>
@@ -166,6 +177,18 @@
             closeForm();
         }
         });
+          function validatePhone() {
+            const phoneInput = document.getElementById('phoneNumber');
+            const phone = phoneInput.value.trim();
+            const isValid = /^[0-9]{10}$/.test(phone);
+
+            if (!isValid) {
+            alert("Please enter a valid 10-digit phone number.");
+            phoneInput.focus();
+            return;
+            }
+            nextStep(4); // Move to Step 5 if valid
+        }
     </script>
 
 
