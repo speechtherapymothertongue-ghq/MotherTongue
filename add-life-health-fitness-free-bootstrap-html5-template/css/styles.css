@@ -553,6 +553,15 @@ input:checked ~ span::after{
   background: #fff;
   border-radius: 0 0 20px 0;
   border: #F9690B 2px solid;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Icon container on left */
@@ -1148,9 +1157,5 @@ margin: 9px auto;
 #portfolio .portfolio-item .portfolio-item-inner .portfolio-info {
 padding: 7px 0 0;
 }
-
-
-
-
-
+}
 }
