@@ -8,6 +8,7 @@ Author URL: http://webthemez.com
 /*************************
 *******Typography******
 **************************/
+
 body {
   padding-top: 100px;
   background: #fff;
@@ -71,7 +72,7 @@ text-align:center;
 }
 .section-header .section-title:before {
   content: "";
-  position: absolute;
+  position: flex;
   width: 140px;
   bottom: -5px;
   right: 0;
@@ -138,7 +139,12 @@ ul.nostyle i {
 .navbar-toggle{
 border-radius: 0;
 }
-
+.navbar-collapse.active{
+  display: block;
+}
+.navbar-collapse.active{
+  display: block;
+}
 .navbar-nav>li>a {
 text-transform: uppercase;
 }
@@ -613,97 +619,110 @@ font-size: 30px;
 font-weight: bold;
 padding-top: 10px;
 }
-
+}
 /* Optional hover effect */
-
-
-#experts {
+#experts{
   padding: 100px 0 75px;
-  background: #FFFFFF;
-  background: url('../images/img4.jpg');
-  background-size: cover;
 }
-#experts .experts-filter {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 50px;
-  display: inline-block;
+.expert-wrapper {
+  display: flex;
+  align-items: flex-start; /* or center if you prefer */
+  gap: 40px;
+  margin-bottom: 60px;
 }
-#experts .experts-filter > li {
-  float: left;
-  display: block;
-}
-#experts .experts-filter > li a {
-  display: block;
-  padding: 7px 15px;
-  margin:0px 2px;
-  color: #D7D7D7;
-  position: relative;
-  border-bottom: 2px solid transparent;
-  background: rgba(229, 229, 229, 0.29);
-}
-#experts .experts-filter > li a:hover,
-#experts .experts-filter > li a.active {
-  background: #F9690E;
-  color: #FFFFFF; 
-} 
-#experts .experts-items {
-  margin: -15px;
-}
-#experts .experts-item {
-  width: 24.9%;
-  float: left;
-  padding: 8px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-#experts .experts-item .experts-item-inner {
-  position: relative;
-  border-bottom: 4px solid #F9690E;
-}
-#experts .experts-item .experts-item-inner .experts-info {
-  opacity: 0;
-  transition: opacity 400ms;
-  -webkit-transition: opacity 400ms;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 18px 0 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  height:100%;
-}
-#experts .experts-item .experts-item-inner .experts-info h3 {
-  font-size: 16px;
-  line-height: 1;
-  margin: 0;
-  color: #fff;
-}
-#experts .experts-item .experts-item-inner .experts-info .preview { 
-  width: 60px;
-  height: 60px;
-  line-height: 36px;
-  text-align: center;
-  color: #F9690E;
-  display:block;
-  text-align: center;
+.expert-box, .big-quote, .hover-container {
+  flex: 1 1 45%
 
-  margin: 45px auto;
-  font-size: 26px;
-  border: 0;
-  /* background: rgba(239, 239, 239, 1); */
-  padding: 10px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.53);
+
 }
-#experts .experts-item:hover .experts-info {
+.expert-box{
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  width:300px;
+  margin: 25px 0 36px;
+  padding: 20px 20px 20px 86px;
+  border-radius: 0 0 20px 0;
+  border: #F9690B 2px solid;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.expert-box .pull-left {
+  margin-right: 20px;
+  position: absolute;
+  left: -13px;
+  top: -15px;
+}
+
+/* Icon styling */
+.expert-box .pull-left > i {
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  width: 79px; 
+  transition: background-color 400ms, background-color 400ms;
+  position: absolute;
+  padding: 14px;
+  color: white;
+  background: #ea650d; 
+  border-radius: 10% 20%;
+  border: 6px solid #fff;
+  transition: background-color 0.05s, color 0.05s;
+  
+}
+.expert-box:hover {
+  background-color: #ea650d ; 
+  color:black;
+}
+.expert-box:hover .pull-left > i {
+  color: rgb(0, 0, 0)
+}
+
+.hover-container {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  display: flex;
+  gap: 12px; /* spacing between paragraphs */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.expert-wrapper:hover .hover-container {
   opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
+
+.hover-paragraph {
+  width: 250px;
+  border: 1px solid #1f2457;
+  padding: 12px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.big-quote {
+  margin: 50px 0 50px;
+  font-size: 2.2rem;
+  font-style: italic;
+  color:#1f2457;
+  justify-content: center;
+  padding-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.expert-wrapper:hover .big-quote {
+  opacity: 0;
+}
+
+
+
+
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
 .isotope-item {
@@ -1117,9 +1136,11 @@ text-align: center;
 }
 @media only screen and (max-width:768px){
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-border-color: #A3A3A3;
-padding: 20px 0;
+ 
+  border-color: #A3A3A3;
+  padding: 100px 0 100px;
 }
+
 }
 .form-control {
   box-shadow: none;
@@ -1160,4 +1181,4 @@ margin: 9px auto;
 padding: 7px 0 0;
 }
 }
-}
+
