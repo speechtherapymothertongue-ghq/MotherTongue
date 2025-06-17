@@ -83,6 +83,7 @@ text-align:center;
   left: 0;
   right: 0;
   height: 10px;
+  
 }
 
 .btn {
@@ -90,13 +91,20 @@ text-align:center;
   border-radius: 0;
 }
 .btn.btn-primary {
-  
   background:  #1f2457;
+  /* box-shadow: 4px 4px 0 rgb(249, 105, 14); */
+  transition: all 0.2s ease;
+  display: inline-block;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus {
-  background: rgb(249, 105, 14)
+  background: rgb(249, 105, 14);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1f2457;
+
 }
+
+
 .listarrow{
 padding:0px;
 }
@@ -199,6 +207,7 @@ color: #FFFFFF;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
 color: #F8680D;
+
  
 background: transparent;
 }
@@ -449,13 +458,14 @@ label {
 label:hover {
   color:#1f2457;
   text-decoration: bold;
+  
 }
 label{
   position: relative;
-  color: orange;
+  color: #ea650d;
 }
 input{
-  color: orange;
+  color: #ea650d;
 }
 label span{
   display: block;
@@ -473,7 +483,7 @@ label span::after{
   bottom: 10px;
   width: 0px;
   height: 0px;
-  border: solid orange;
+  border: solid #ea650d;
   border-width: 0 6px 6px 0;
   transform: rotate(45deg);
   opacity: 0;
@@ -603,10 +613,13 @@ input:checked ~ span::after{
 
 .media.service-box:hover{
   background-color: #ea650d; 
-  color:black 
+  color:black ;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1f2457;
 }
 .media.service-box:hover .pull-left > i {
   color: rgb(0, 0, 0)
+  
 }
 /* Optional: Custom style override when inside .features */
 #features .media.service-box .pull-left > i {
@@ -674,6 +687,8 @@ padding-top: 10px;
 .expert-box:hover {
   background-color: #ea650d ; 
   color:black;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1f2457;
 }
 .expert-box:hover .pull-left > i {
   color: rgb(0, 0, 0)
@@ -730,17 +745,19 @@ padding-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 50px;
+  margin: 50px auto 0 auto; /* top: 50px, left/right: auto (centered), bottom: 0 */
+  max-width: 1000px;
+  
 }
 
 .comparison-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   align-items: stretch;
   gap: 15px;
 }
 
-.feature-title {
+/* .feature-title {
   background-color: #fff3cd;
   color: #1f2457;
   font-weight: bold;
@@ -749,10 +766,9 @@ padding-top: 10px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
+} */
 
 .comparison-box {
-  background-color: #f5f5f5;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -760,31 +776,48 @@ padding-top: 10px;
   transition: transform 0.3s ease;
 }
 
-.comparison-box:hover {
-  transform: scale(1.03);
-}
-
+/* Shared child styles */
 .comparison-box .label {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #555;
 }
 
 .comparison-box .value {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #222;
+  font-size: 2.2rem;
 }
 
-.online {
-  background-color: #e0f7fa;
-  border: 2px solid #00acc1;
+/* Online styling */
+.comparison-box.online {
+  color: white;
+  background-color: #1f2457;
+  
 }
 
-.offline {
-  background-color: #ffe0e0;
-  border: 2px solid #ff5252;
+.comparison-box.online .label{
+  color: white;
+}
+.comparison-box.online:hover {
+  transform: scale(1.05);
+  background-color: #ea650d ; 
+  color:black;
+}
+.comparison-box.online:hover .label {
+  color:black;
+}
+
+/* Offline styling */
+.comparison-box.offline {
+  color: black;
+  background-color: #a2a2a2;
+
+}
+
+.comparison-box.offline .label {
+  color: black;
+}
+.comparison-box.offline:hover {
+  transform: scale(1.01); /* use 0.95 instead of 0.5, less jarring */
 }
 
 /* Responsive */
@@ -794,7 +827,7 @@ padding-top: 10px;
   }
 }
 .tick, .cross {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   display: block;
   margin-bottom: 10px;
@@ -807,7 +840,20 @@ padding-top: 10px;
 .cross {
   color: #F44336;
 }
+/* Dollar sign styling */
+.currency {
+  font-size: 1.4rem;
+  vertical-align: top;
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
 
+/* Per-month styling */
+.per {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-left: 4px;
+}
 /* The rest from earlier remains the same */
 
 

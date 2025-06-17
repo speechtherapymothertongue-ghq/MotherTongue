@@ -361,132 +361,101 @@
     </div>
 
     <!-- Feature Comparison Cards -->
-    <div class="comparison-grid">
+    <div class="comparison-grid" >
 
       <div class="comparison-row">
-        <div class="feature-title">Cost</div>
-        <div class="comparison-box online">
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">$45/month</div>
-        </div>
+        <!-- <div class="feature-title">Cost</div> -->
+
         <div class="comparison-box offline">
           <span class="cross">✖</span>
           <div class="label">Offline Therapy</div>
-          <div class="value">$150/session</div>
+          <div class="value"><span class="currency">$</span>150<span class="per">/month</span></div>
+        </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value"><span class="currency">$</span>45<span class="per">/month</span></div>
         </div>
       </div>
 
       <div class="comparison-row">
-        <div class="feature-title">Time Commitment</div>
-        <div class="comparison-box online">
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">Flexible (No Travel)</div>
-        </div>
+        <!-- <div class="feature-title">Time Commitment</div> -->
+
         <div class="comparison-box offline">
           <span class="cross">✖</span>
           <div class="label">Offline Therapy</div>
           <div class="value">Fixed Schedule + Travel</div>
         </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">Flexible (No Travel)</div>
+        </div>
       </div>
 
       <div class="comparison-row">
-        <div class="feature-title">Energy Consumption</div>
-        <div class="comparison-box online">
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">No Commuting</div>
-        </div>
+        <!-- <div class="feature-title">Energy Consumption</div> -->
+
         <div class="comparison-box offline">
           <span class="cross">✖</span>
           <div class="label">Offline Therapy</div>
           <div class="value">Energy Spent on Travel</div>
         </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">No Commuting</div>
+        </div>
       </div>
 
       <div class="comparison-row">
-        <div class="feature-title">Convenience</div>
-        <div class="comparison-box online">
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">Access from Anywhere</div>
-        </div>
+        <!-- <div class="feature-title">Convenience</div> -->
+
         <div class="comparison-box offline">
           <span class="cross">✖</span>
           <div class="label">Offline Therapy</div>
           <div class="value">Requires Travel</div>
         </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">Access from Anywhere</div>
+        </div>
       </div>
 
       <div class="comparison-row">
-        <div class="feature-title">Session Length</div>
-        <div class="comparison-box online">
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">Unlimited Access</div>
-        </div>
+        <!-- <div class="feature-title">Session Length</div> -->
+
         <div class="comparison-box offline">
           <span class="cross">✖</span>
           <div class="label">Offline Therapy</div>
           <div class="value">Time-Limited</div>
         </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">Unlimited Access</div>
+        </div>
       </div>
 
       <div class="comparison-row">
-        <div class="feature-title">Support Availability</div>
-        <div class="comparison-box online">
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">24/7 Support</div>
-        </div>
+        <!-- <div class="feature-title">Support Availability</div> -->
+
         <div class="comparison-box offline">
           <span class="cross">✖</span>
           <div class="label">Offline Therapy</div>
           <div class="value">Limited Hours</div>
         </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">24/7 Support</div>
+        </div>
       </div>
     </div>
-
+    <a class="btn btn-primary btn-lg" onclick="openForm()">Get Best Prices for the Best Treatment</a>
     <!-- Pricing Plans (unchanged, optional edits later) -->
-    <div class="row pricing-section">
-      <div class="col-md-6">
-        <div class="pricing-card">
-          <ul>
-            <li class="plan-header">
-              <div class="price-duration">
-                <span class="price">$45</span>
-                <span class="duration">per month</span>
-              </div>
-              <div class="plan-name">Basic Plan</div>
-            </li>
-            <li><strong>1</strong> Therapy Domain</li>
-            <li><strong>Unlimited</strong> Sessions</li>
-            <li>24/7 Support</li>
-            <li class="plan-purchase"><a href="#" class="btn">Get It Now!</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="col-md-6">
-        <div class="pricing-card featured">
-          <ul>
-            <li class="plan-header">
-              <div class="price-duration">
-                <span class="price">$85</span>
-                <span class="duration">per month</span>
-              </div>
-              <div class="plan-name">Premium Plan</div>
-            </li>
-            <li><strong>5</strong> Therapy Domains</li>
-            <li><strong>Unlimited</strong> Sessions with Therapists</li>
-            <li>Priority Support</li>
-            <li class="plan-purchase"><a href="#" class="btn">Get It Now!</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 
