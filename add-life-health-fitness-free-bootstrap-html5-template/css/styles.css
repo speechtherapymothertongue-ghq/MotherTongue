@@ -488,7 +488,7 @@ color: #0b0b0b;
 }
 
 .open-button:hover {
-  background-color: #FF007F;
+  background-color: #2bff00;
 }
 
 /* 🪟 Popup overlay */
@@ -505,22 +505,20 @@ color: #0b0b0b;
 
 /* 📋 Form container */
 .form-container {
-  display: block;
-  margin-left:500px;
-  margin-top:200px;
   background: #fff0f6;
   padding: 50px 30px;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 500px;
+  margin: 40px auto;  /* centers horizontally and adds 20px top & bottom margin */
   animation: bounceIn 0.3s ease;
-
 }
+
 
 /* 🪄 Animate form popup */
 @keyframes bounceIn {
-  from { transform: scale(0.9); opacity: 0; }
+  from { transform: scale(0.9); opacity: 1; }
   to { transform: scale(1); opacity: 1; }
 }
 

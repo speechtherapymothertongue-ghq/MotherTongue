@@ -77,7 +77,7 @@
         
     </section>
         <section id="form">
-            <div class="form-popup" id="myForm">
+            <div class="form-popup" id="myForm" >
                 <form class="form-container" id="therapyForm">
                     <!-- Step 1 -->
                     <div class="form-step" id="step1">
@@ -145,18 +145,23 @@
     <script>
         let currentStep = 1;
         function openForm() {
-        const popup = document.getElementById("therapyForm");
-        popup.style.display = "flex";
-        currentStep = 1;
-        showStep(currentStep);
+          const popup = document.getElementById("therapyForm");
+          popup.style.display = "flex";
+          currentStep = 1;
+          showStep(1);
         }
 
         // Hide the popup and reset step
         function closeForm() {
-        const popup = document.getElementById("therapyForm");
-        popup.style.display = "flex";
-        currentStep = 1;
-        showStep(currentStep);
+          const popup = document.getElementById("therapyForm");
+          popup.style.display = "none";
+
+          // Reset all steps' visibility to none
+          const steps = document.querySelectorAll(".form-step");
+          steps.forEach((el) => el.style.display = "none");
+
+          // Reset step to 1
+          currentStep = 1;
         }
 
         // Show only the current step
@@ -178,6 +183,9 @@
         currentStep = step - 1;
         showStep(currentStep);
         }
+        document.addEventListener("DOMContentLoaded", () => {
+          showStep(1);
+        });
 
         // Close form when clicking outside the form container
         window.addEventListener("click", function (e) {
