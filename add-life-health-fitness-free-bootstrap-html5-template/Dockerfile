@@ -1,14 +1,22 @@
 FROM node:22-alpine
 
-WORKDIR /app
+# Set working directory
+WORKDIR /app/mothertongue-server
 
+# Install nodemon globally
 RUN npm install -g nodemon
 
-COPY mothertongue-server/package*.json ./mothertongue-server/
-RUN cd mothertongue-server && npm install
+# Copy package files first to use cache
+COPY mothertongue-server/package*.json ./
 
-COPY . .
+# Install server dependencies
+RUN npm install
 
+# Copy the rest of the server code
+COPY mothertongue-server/ ./
+
+# Expose API port
 EXPOSE 8000
 
-CMD ["nodemon", "--watch", "mothertongue-server", "mothertongue-server/server.js"]
+# Start with nodemon
+CMD ["nodemon", "--watch", ".", "server.js"]
