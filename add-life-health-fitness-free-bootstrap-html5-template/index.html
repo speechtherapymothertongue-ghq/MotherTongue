@@ -114,17 +114,33 @@
                         </div>
                     </div>
                     <!-- Step 4: Phone Number -->
-                        <div class="form-step" id="step4">
-                            <h1>📱 <strong>Enter Your Phone Number</strong></h1>
-                            <input type="tel" name="phone" id="phoneNumber" placeholder="e.g., 9876543210" required 
-                                    pattern="[0-9]{10}" 
-                                    style="padding:10px; font-size:16px; width: 90%; margin-bottom: 20px; border-radius: 6px; border: 1px solid #ccc;">
-                            
-                            <div style="text-align:center;">
-                                <button type="button" class="btn prev-btn" onclick="prevStep(4)">Prev</button>
-                                <button type="button" class="btn next-btn" onclick="validatePhone()">Next</button>
-                            </div>
-                        </div>
+             <div class="form-step" id="step4">
+              <h1>📱 <strong>Enter Your Phone Number</strong></h1>
+
+              <!-- Country code select -->
+              <div style="display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 20px;">
+                  <select id="countryCode" name="countryCode" required 
+                          style="padding:10px; font-size:16px; border-radius: 6px; border: 1px solid #ccc;">
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <!-- Add more as needed -->
+                    </select>
+
+                    <!-- Phone number input -->
+                    <input type="tel" name="phone" id="phoneNumber" placeholder="e.g., 9876543210" required 
+                          pattern="[0-9]{10}" 
+                          style="padding:10px; font-size:16px; width: 100%; border-radius: 6px; border: 1px solid #ccc;">
+                </div>
+
+                <div style="text-align:center;">
+                    <button type="button" class="btn prev-btn" onclick="prevStep(4)">Prev</button>
+                    <button type="button" class="btn next-btn" onclick="validatePhone()">Next</button>
+                </div>
+            </div>
+
                     <!-- Final Submit -->
                     <div class="form-step" id="submitStep">
                         <button type="button" class="btn prev-btn" onclick="prevStep(5)">Prev </button>
@@ -210,14 +226,18 @@
 
         // Handle form submission
         document.getElementById('therapyForm').addEventListener('submit', function(e) {
+          
           e.preventDefault();
           // Gather form data
           const form = e.target;
           const person = Array.from(form.querySelectorAll('input[name="person"]:checked')).map(cb => cb.value);
           const therapy = Array.from(form.querySelectorAll('input[name="therapy"]:checked')).map(cb => cb.value);
           const language = Array.from(form.querySelectorAll('input[name="language"]:checked')).map(cb => cb.value);
+          const countrycode = form.querySelector('select[name="countryCode"]').value;
           const phone = form.querySelector('input[name="phone"]').value.trim();
-          const data = { person, therapy, language, phone, timestamp: new Date().toISOString().slice(0,19) };
+          const fullphone = countrycode + phone;
+          console.log(fullphone);
+          const data = { person, therapy, language, fullphone, timestamp: new Date().toISOString().slice(0,19) };
 
           fetch('http://localhost:8000/api/submit', {
             method: 'POST',
