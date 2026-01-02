@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="webthemez">
+    <title>MotherTongue</title>
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet"> 
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet"> 
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+
+</head> 
+
+<body id="home">
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active" ><a href="#home" >Home</a></li>  
+                        <li class="scroll" ><a href="#services" >PROGRAM</a></li>
+                        <!-- <li class="scroll"><a href="#about">About</a></li>  -->
+                        <li class="scroll" ><a href="#experts" >OUR EXPERTS</a></li>
+                        <li class="scroll" ><a href="#pricing" >Pricing</a></li>
+						<li class="scroll" ><a href="#gallery" >Gallery</a></li>
+                        
+                        <li class="scroll" ><a href="#reviews" >Reviews</a></li>                        
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+    <section id="hero-banner">
+        <div class="banner-inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2>Speak <b>Better. Brighter. Bolder.</b></h2>
+                <p>
+                  Fast, friendly speech therapy—<br>
+                  Just results.
+                </p>
+                <p>
+                  💬 Try it now. Get your<br>
+                  <strong>FREE evaluation</strong> today!
+                </p>
+                <!-- Modal Trigger Button (in your hero banner) -->
+                
+                    <a class="btn btn-primary btn-lg" onclick="openForm()">Start My Free Evaluation</a>
+<!-- Popup Form -->
+<!-- Popup Form for Speech Therapy -->
+<!-- Popup Form for Speech Therapy -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section>
+        
+    </section>
+        <section id="form">
+            <div class="form-popup" id="myForm" >
+                <form class="form-container" id="therapyForm">
+                    <!-- Step 1 -->
+                    <div class="form-step" id="step1">
+                        <h1>👨‍👩‍👧 <strong >Who needs therapy?</strong></h1>
+                        <label><input type="checkbox" name="person" value="Child" > Child</label><br>
+                        <label><input type="checkbox" name="person" value="Adult"> Adult</label>
+                        <div style="text-align:center;">
+                            <button type="button" class="btn next-btn" onclick="nextStep(1)">Next </button>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="form-step" id="step2">
+                        <h1>🗣️ <strong>What are you looking therapy for?</strong></h1>
+                        <label><input type="checkbox" name="therapy" value="Unclear speech" style="font-size: larger;"> Unclear speech</label><br>
+                        <label><input type="checkbox" name="therapy" value="Stammering"> Stammering</label><br>
+                        <label><input type="checkbox" name="therapy" value="Fast speech"> Fast speech</label><br>
+                        <label><input type="checkbox" name="therapy" value="Speech delay"> Speech delay</label><br>
+                        <label><input type="checkbox" name="therapy" value="Stroke/Trauma injury"> Stroke/Trauma injury</label><br>
+                        <label><input type="checkbox" name="therapy" value="Developmental delay"> Developmental delay</label><br>
+                        <label><input type="checkbox" name="therapy" value="Reading/Writing difficulty"> Reading/Writing difficulty</label>
+                        <div style="text-align:center;">
+                            <button type="button" class="btn prev-btn" onclick="prevStep(2)">Prev </button>
+                            <button type="button" class="btn next-btn" onclick="nextStep(2)">Next </button>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="form-step" id="step3">
+                        <h1>🌐 <strong style="font-size: large;">Preferred Language</strong></h1>
+                        <label><input type="checkbox" name="language" value="Hindi"> Hindi</label><br>
+                        <label><input type="checkbox" name="language" value="English"> English</label>
+                        <div style="text-align:center;">
+                            <button type="button" class="btn prev-btn" onclick="prevStep(3)">Prev </button>
+                            <button type="button" class="btn next-btn" onclick="nextStep(3)">Next </button>
+                        </div>
+                    </div>
+                    <!-- Step 4: Phone Number -->
+             <div class="form-step" id="step4">
+              <h1>📱 <strong>Enter Your Phone Number</strong></h1>
+
+              <!-- Country code select -->
+              <div style="display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 20px;">
+                  <select id="countryCode" name="countryCode" required 
+                          style="padding:10px; font-size:16px; border-radius: 6px; border: 1px solid #ccc;">
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <!-- Add more as needed -->
+                    </select>
+
+                    <!-- Phone number input -->
+                    <input type="tel" name="phone" id="phoneNumber" placeholder="e.g., 9876543210" required 
+                          pattern="[0-9]{10}" 
+                          style="padding:10px; font-size:16px; width: 100%; border-radius: 6px; border: 1px solid #ccc;">
+                </div>
+
+                <div style="text-align:center;">
+                    <button type="button" class="btn prev-btn" onclick="prevStep(4)">Prev</button>
+                    <button type="button" class="btn next-btn" onclick="validatePhone()">Next</button>
+                </div>
+            </div>
+
+                    <!-- Final Submit -->
+                    <div class="form-step" id="submitStep">
+                        <button type="button" class="btn prev-btn" onclick="prevStep(5)">Prev </button>
+                        <button type="submit" class="btn">🚀 Submit</button>
+                    </div>
+                </form>
+            </div>
+      </section>  
+      <!-- Notification Popup -->
+      <section>
+        <div id="thankYouNotification" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%); background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2); padding:30px 40px; z-index:9999; text-align:center;">
+          <h3>Thank you!</h3>
+          <p>Your response has been saved.<br>We have sent you a WhatsApp on your number. Let's talk there!!!.</p>
+          <button class="btn btn-primary" onclick="closeThankYou()">Close</button>
+        </div>
+      </section>
+
+    <script>
+        let currentStep = 1;
+        function openForm() {
+          const popup = document.getElementById("therapyForm");
+          popup.style.display = "flex";
+          currentStep = 1;
+          showStep(1);
+        }
+
+        // Hide the popup and reset step
+        function closeForm() {
+          const popup = document.getElementById("therapyForm");
+          popup.style.display = "none";
+
+          // Reset all steps' visibility to none
+          const steps = document.querySelectorAll(".form-step");
+          steps.forEach((el) => el.style.display = "none");
+
+          // Reset step to 1
+          currentStep = 1;
+        }
+
+        // Show only the current step
+        function showStep(step) {
+        const steps = document.querySelectorAll(".form-step");
+        steps.forEach((el, index) => {
+            el.style.display = (index === step - 1) ? "block" : "none";
+        });
+        }
+
+        // Go to the next step
+        function nextStep(step) {
+        currentStep = step + 1;
+        showStep(currentStep);
+        }
+
+        // Go to the previous step (if you implement Back buttons)
+        function prevStep(step) {
+        currentStep = step - 1;
+        showStep(currentStep);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+          showStep(1);
+        });
+
+        // Close form when clicking outside the form container
+        window.addEventListener("click", function (e) {
+        const popup = document.getElementById("myForm");
+        const formContainer = popup.querySelector(".form-container");
+        if (e.target === popup) {
+            closeForm();
+        }
+        });
+          function validatePhone() {
+            const phoneInput = document.getElementById('phoneNumber');
+            const phone = phoneInput.value.trim();
+            const isValid = /^[0-9]{10}$/.test(phone);
+
+            if (!isValid) {
+            alert("Please enter a valid 10-digit phone number.");
+            phoneInput.focus();
+            return;
+            }
+            nextStep(4); // Move to Step 5 if valid
+        }
+
+        // Handle form submission
+        document.getElementById('therapyForm').addEventListener('submit', function(e) {
+          
+          e.preventDefault();
+          // Gather form data
+          const form = e.target;
+          const person = Array.from(form.querySelectorAll('input[name="person"]:checked')).map(cb => cb.value);
+          const therapy = Array.from(form.querySelectorAll('input[name="therapy"]:checked')).map(cb => cb.value);
+          const language = Array.from(form.querySelectorAll('input[name="language"]:checked')).map(cb => cb.value);
+          const countrycode = form.querySelector('select[name="countryCode"]').value;
+          const phone = form.querySelector('input[name="phone"]').value.trim();
+          const fullphone = countrycode + phone;
+          console.log(fullphone);
+          const data = { person, therapy, language, fullphone, timestamp: new Date().toISOString().slice(0,19) };
+
+          fetch('http://localhost:8000/api/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          })
+          .then(res => res.json())
+          .then(response => {
+            if (response.success) {
+              console.log('Response saved successfully');
+              console.log(response);
+              document.getElementById('thankYouNotification').style.display = 'block';
+              document.getElementById('myForm').style.display = 'none';
+            } else {
+              alert('There was an error saving your response.');
+            }
+          })
+          .catch(() => alert('Could not connect to the server.'));
+        });
+
+        function closeThankYou() {
+          document.getElementById('thankYouNotification').style.display = 'none';
+        }
+    </script>
+
+
+<div class="scroll-container">
+  <svg class="path-svg" viewBox="-100 0 500 1200" xmlns="http://www.w3.org/2000/svg">
+    <path 
+      d="M250 0 C350 200, 150 400, 250 600 S350 1000, 250 1200" 
+      class="glowing-dotted-path" />
+  </svg>
+
+  <div class="rolling-icon">
+  <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="20" width="44" height="24" fill="#5ea9ff" rx="8" ry="8" />
+    <circle cx="20" cy="48" r="8" fill="#333" />
+    <circle cx="44" cy="48" r="8" fill="#333" />
+  </svg>
+</div>
+</div>
+
+
+
+    <!-- Extra space for scroll -->
+    <!-- <div style="height: 3000px;"></div> -->
+
+
+    <section id="services" >
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">What we offer</h2>
+                <p class="wow fadeInDown">At MotherTongue, you get a wide variety of online therapy classes and more..<br></p>
+            </div>
+
+            <div class="row" onclick="openForm()">
+                <div class="features">
+                    <div class="row">
+                       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-comment"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Speech Therapy</h4>
+                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-puzzle-piece"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Fun activites</h4>
+                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-book"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Assignments</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-bullseye"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Progress Track</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Expert Therapists</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-volume-up"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Tech support</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4--></div>
+                        <div class="col-md-12 text-center" style="margin-top: 30px;">
+                            <a class="btn btn-primary btn-lg" onclick="openForm()">Start My Free Evaluation</a>
+                        </div>
+                    </div><!--/.row-->
+
+
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+<section id="experts">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeInDown">Our Expert Therapists</h2>
+      <p class="wow fadeInDown">Best therapists from across the country <br> .. </p>
+    </div>
+
+    <!-- Expert 1 row -->
+    <div class="row align-items-center mb-5" onclick="openForm()">
+        <div class ="expert-wrapper">
+      <div class="col-md-6 col-sm-12">
+        <div class="expert-box">
+          <div class="pull-left">
+            <i class="fa fa-user-md"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Urvashi Gupta</h4>
+            
+            <p>Lead Trainer with 10+ years of experience in onsite and hybrid therapy.</p>
+            <div class="hover-container">
+              <div class="hover-paragraph">Specializes in stuttering, articulation disorders, and bilingual therapy techniques.</div>
+              <div class="hover-paragraph">Helps with fluency shaping and parental counseling.</div>
+              <div class="hover-paragraph">Conducts online workshops for professionals.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+            <blockquote class="big-quote">
+            "Therapy isn't just a profession, it's a passion for transforming lives through speech."
+            </blockquote>
+      </div>
+      </div>
+    </div>
+
+    <!-- Expert 2 row -->
+    <div class="row align-items-center mb-5" onclick="openForm()">
+        <div class ="expert-wrapper">
+      <div class="col-md-6 col-sm-12">
+        <div class="expert-box">
+          <div class="pull-left">
+            <i class="fa fa-user-md"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Rahul Mehta</h4>
+            <p>Therapy Specialist focused on early intervention and language development.</p>
+            <div class="hover-container">
+              <div class="hover-paragraph">Experienced in autism spectrum therapy and parent-guided speech programs.</div>
+              <div class="hover-paragraph">Skilled in non-verbal communication techniques and assistive technologies.</div>
+              <div class="hover-paragraph">Trains caregivers for at-home language stimulation activities.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-6 col-sm-12">
+            <blockquote class="big-quote">
+            "Every child's voice is worth hearing; our job is to help them find it."
+            </blockquote>
+      </div>
+    </div>
+    </div>
+
+    <!-- Add more expert + quote pairs here -->
+
+  </div>
+</section>
+<section id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title wow fadeInDown">Pricing</h2>
+      <p class="wow fadeInDown">
+        Why choose offline therapy when our Online Therapy is faster, cheaper, and more convenient? See how they stack up below!
+      </p>
+    </div>
+
+    <!-- Feature Comparison Cards -->
+    <div class="comparison-grid" >
+
+      <div class="comparison-row">
+        <!-- <div class="feature-title">Cost</div> -->
+
+        <div class="comparison-box offline">
+          <span class="cross">✖</span>
+          <div class="label">Offline Therapy</div>
+          <div class="value"><span class="currency">$</span>150<span class="per">/month</span></div>
+        </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value"><span class="currency">$</span>45<span class="per">/month</span></div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <!-- <div class="feature-title">Time Commitment</div> -->
+
+        <div class="comparison-box offline">
+          <span class="cross">✖</span>
+          <div class="label">Offline Therapy</div>
+          <div class="value">Fixed Schedule + Travel</div>
+        </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">Flexible (No Travel)</div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <!-- <div class="feature-title">Energy Consumption</div> -->
+
+        <div class="comparison-box offline">
+          <span class="cross">✖</span>
+          <div class="label">Offline Therapy</div>
+          <div class="value">Energy Spent on Travel</div>
+        </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">No Commuting</div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <!-- <div class="feature-title">Convenience</div> -->
+
+        <div class="comparison-box offline">
+          <span class="cross">✖</span>
+          <div class="label">Offline Therapy</div>
+          <div class="value">Requires Travel</div>
+        </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">Access from Anywhere</div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <!-- <div class="feature-title">Session Length</div> -->
+
+        <div class="comparison-box offline">
+          <span class="cross">✖</span>
+          <div class="label">Offline Therapy</div>
+          <div class="value">Time-Limited</div>
+        </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">Unlimited Access</div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <!-- <div class="feature-title">Support Availability</div> -->
+
+        <div class="comparison-box offline">
+          <span class="cross">✖</span>
+          <div class="label">Offline Therapy</div>
+          <div class="value">Limited Hours</div>
+        </div>
+        <div class="comparison-box online" onclick="openForm()" >
+          <span class="tick">✔</span>
+          <div class="label">Online Therapy</div>
+          <div class="value">24/7 Support</div>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-primary btn-lg" onclick="openForm()">Get Best Prices for the Best Treatment</a>
+    <!-- Pricing Plans (unchanged, optional edits later) -->
+
+</section>
+
+
+
+
+<!--/#pricing-->
+
+
+
+<!--/#experts-->
+
+  <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">Gallery</h2>
+                <!-- <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p> -->
+            </div>
+                <div class="carousel-wrapper" onclick="openForm()">
+                <div class="carousel-track">
+                    <!-- Original -->
+                    <div class="gallery-item"><img src="images/gallery/01.jpg"></div>
+                    <div class="gallery-item"><img src="images/gallery/02.jpg"></div>
+                    <div class="gallery-item"><img src="images/gallery/03.jpg"></div>
+                    <div class="gallery-item"><img src="images/gallery/04.jpg"></div>
+                    <!-- Duplicated -->
+                    <div class="gallery-item"><img src="images/gallery/01.jpg"></div>
+                    <div class="gallery-item"><img src="images/gallery/02.jpg"></div>
+                    <div class="gallery-item"><img src="images/gallery/03.jpg"></div>
+                    <div class="gallery-item"><img src="images/gallery/04.jpg"></div>
+                </div>
+                </div>
+            </div>
+            
+
+                
+            </div>
+        </div><!--/.container-->
+    </section><!--/#gallery-->
+
+  
+    <section class="reviews-area" id="reviews">
+			<div class="container">
+				<div class="section-header">
+                <h2 class="section-title wow fadeInDown">What parents say about us</h2>
+                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-reviews animate_fade_in" style="opacity: 1; right: 0px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<blockquote>Sontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3">
+									<img src="images/pic1.jpg" alt="client">
+								</div>
+								<div class="col-xs-9 half-gutter">
+									<h5>John Bond</h5>
+									<h6>Lorem Ipsuis simply</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-reviews animate_fade_in" style="opacity: 1; right: 0px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<blockquote>Tontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3">
+									<img src="images/pic2.jpg" alt="client">
+								</div>
+								<div class="col-xs-9 half-gutter">
+									<h5>John Bond</h5>
+									<h6>Lorem Ipsuis simply</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-reviews animate_fade_in" style="opacity: 1; right: 0px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<blockquote>Aontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3">
+									<img src="images/pic1.jpg" alt="client">
+								</div>
+								<div class="col-xs-9 half-gutter">
+									<h5>John Bond</h5>
+									<h6>Lorem Ipsuis simply</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+  
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom-scripts.js"></script>
+    <script src="js/formOpen.js"></script>
+      
+      
+      
+      
+      
+      
+</body>
+</html>
