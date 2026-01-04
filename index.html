@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -12,174 +14,121 @@
     <link href="css/animate.min.css" rel="stylesheet"> 
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <title>MotherTongue - Nurturing Speech & Language Development</title>
+    
+</head>
+<body>
+    <nav class="nav">
 
-</head> 
-
-<body id="home">
-    <header id="header">
-        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="scroll active" ><a href="#home" >Home</a></li>  
-                        <li class="scroll" ><a href="#services" >PROGRAM</a></li>
-                        <!-- <li class="scroll"><a href="#about">About</a></li>  -->
-                        <li class="scroll" ><a href="#experts" >OUR EXPERTS</a></li>
-                        <li class="scroll" ><a href="#pricing" >Pricing</a></li>
-						<li class="scroll" ><a href="#gallery" >Gallery</a></li>
-                        
-                        <li class="scroll" ><a href="#reviews" >Reviews</a></li>                        
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </header><!--/header-->
-    <section id="hero-banner">
-        <div class="banner-inner">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <h2>Speak <b>Better. Brighter. Bolder.</b></h2>
-                <p>
-                  Fast, friendly speech therapy—<br>
-                  Just results.
-                </p>
-                <p>
-                  💬 Try it now. Get your<br>
-                  <strong>FREE evaluation</strong> today!
-                </p>
-                <!-- Modal Trigger Button (in your hero banner) -->
-                
-                    <a class="btn btn-primary btn-lg" onclick="openForm()">Start My Free Evaluation</a>
-<!-- Popup Form -->
-<!-- Popup Form for Speech Therapy -->
-<!-- Popup Form for Speech Therapy -->
-              </div>
-            </div>
-          </div>
+        <div class="nav-container">
+        <div class="logo-container">
+            <div class="logo">💕 MotherTongue Speech</div>
+            <div class="logo-tagline">ONLINE SPEECH THERAPY</div>
         </div>
-      </section>
-    <section>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#how">What we do</a>
+                <a href="#approach">Our Approach</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#expert">Our Experts</a>
+                <a class="btn" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">Talk to a therapist</a>
+              </div>   
+        </div>
+    </nav>
+
+    <section class="hero", id="hero">
+        <div class="hero-content">
+            <h1>Because We Speak Better<br> <span class="highlight">in Mother Tongue</span></h1>
+            <p>Everyone deserves to be understood in the <b>language of home</b>. Our online sessions in your loved one's mother tongue help them speak clearly, confidently, and with joy — so they can shine in school, at home, and in life.</p>
+        </div>
         
-    </section>
-        <section id="form">
-            <div class="form-popup" id="myForm" >
-                <form class="form-container" id="therapyForm">
-                    <!-- Step 1 -->
-                    <div class="form-step" id="step1">
-                        <h1>👨‍👩‍👧 <strong >Who needs therapy?</strong></h1>
-                        <label><input type="checkbox" name="person" value="Child" > Child</label><br>
-                        <label><input type="checkbox" name="person" value="Adult"> Adult</label>
-                        <div style="text-align:center;">
-                            <button type="button" class="btn next-btn" onclick="nextStep(1)">Next </button>
-                        </div>
-                    </div>
-                    <!-- Step 2 -->
-                    <div class="form-step" id="step2">
-                        <h1>🗣️ <strong>What are you looking therapy for?</strong></h1>
-                        <label><input type="checkbox" name="therapy" value="Unclear speech" style="font-size: larger;"> Unclear speech</label><br>
-                        <label><input type="checkbox" name="therapy" value="Stammering"> Stammering</label><br>
-                        <label><input type="checkbox" name="therapy" value="Fast speech"> Fast speech</label><br>
-                        <label><input type="checkbox" name="therapy" value="Speech delay"> Speech delay</label><br>
-                        <label><input type="checkbox" name="therapy" value="Stroke/Trauma injury"> Stroke/Trauma injury</label><br>
-                        <label><input type="checkbox" name="therapy" value="Developmental delay"> Developmental delay</label><br>
-                        <label><input type="checkbox" name="therapy" value="Reading/Writing difficulty"> Reading/Writing difficulty</label>
-                        <div style="text-align:center;">
-                            <button type="button" class="btn prev-btn" onclick="prevStep(2)">Prev </button>
-                            <button type="button" class="btn next-btn" onclick="nextStep(2)">Next </button>
-                        </div>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="form-step" id="step3">
-                        <h1>🌐 <strong style="font-size: large;">Preferred Language</strong></h1>
-                        <label><input type="checkbox" name="language" value="Hindi"> Hindi</label><br>
-                        <label><input type="checkbox" name="language" value="English"> English</label>
-                        <div style="text-align:center;">
-                            <button type="button" class="btn prev-btn" onclick="prevStep(3)">Prev </button>
-                            <button type="button" class="btn next-btn" onclick="nextStep(3)">Next </button>
-                        </div>
-                    </div>
-                    <!-- Step 4: Phone Number -->
-             <div class="form-step" id="step4">
-              <h1>📱 <strong>Enter Your Phone Number</strong></h1>
 
-              <!-- Country code select -->
-              <div style="display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 20px;">
-                  <select id="countryCode" name="countryCode" required 
-                          style="padding:10px; font-size:16px; border-radius: 6px; border: 1px solid #ccc;">
-                      <option value="+91">🇮🇳 +91</option>
-                      <option value="+1">🇺🇸 +1</option>
-                      <option value="+44">🇬🇧 +44</option>
-                        <option value="+81">🇯🇵 +81</option>
-                        <option value="+61">🇦🇺 +61</option>
-                        <!-- Add more as needed -->
-                    </select>
-
-                    <!-- Phone number input -->
-                    <input type="tel" name="phone" id="phoneNumber" placeholder="e.g., 9876543210" required 
-                          pattern="[0-9]{10}" 
-                          style="padding:10px; font-size:16px; width: 100%; border-radius: 6px; border: 1px solid #ccc;">
+        <div class="hero-form-card">
+            <h4>🌸 Let's Begin Your Journey</h4>
+            <form id="therapyForm">
+                <!-- Step 1 -->
+                <div class="form-step active" id="step1">
+                    <h2>👨‍👩‍👧 Who needs speech therapy?</h2>
+                    <label><input type="checkbox" name="person" value="Child"> My child</label>
+                    <label><input type="checkbox" name="person" value="Adult"> An adult in our family</label>
+                    <div class="form-buttons">
+                        <button type="button" class="btn" onclick="nextStep(1)">Continue</button>
+                    </div>
                 </div>
-
-                <div style="text-align:center;">
-                    <button type="button" class="btn prev-btn" onclick="prevStep(4)">Prev</button>
-                    <button type="button" class="btn next-btn" onclick="validatePhone()">Next</button>
-                </div>
-            </div>
-
-                    <!-- Final Submit -->
-                    <div class="form-step" id="submitStep">
-                        <button type="button" class="btn prev-btn" onclick="prevStep(5)">Prev </button>
-                        <button type="submit" class="btn">🚀 Submit</button>
+                
+                <!-- Step 2 -->
+                <div class="form-step" id="step2">
+                    <h2>💭 What brings you here today?</h2>
+                    <label><input type="checkbox" name="therapy" value="Unclear speech"> Unclear speech</label>
+                    <label><input type="checkbox" name="therapy" value="Stammering"> Stammering</label>
+                    <label><input type="checkbox" name="therapy" value="Fast speech"> Fast speech</label>
+                    <label><input type="checkbox" name="therapy" value="Speech delay"> Speech delay</label>
+                    <label><input type="checkbox" name="therapy" value="Stroke/Trauma injury"> Stroke or injury recovery</label>
+                    <label><input type="checkbox" name="therapy" value="Developmental delay"> Developmental concerns</label>
+                    <label><input type="checkbox" name="therapy" value="Reading/Writing difficulty"> Reading or writing challenges</label>
+                    <div class="form-buttons">
+                        <button type="button" class="btn prev-btn" onclick="prevStep(2)">Back</button>
+                        <button type="button" class="btn" onclick="nextStep(2)">Continue</button>
                     </div>
-                </form>
-            </div>
-      </section>  
-      <!-- Notification Popup -->
-      <section>
-        <div id="thankYouNotification" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%); background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2); padding:30px 40px; z-index:9999; text-align:center;">
-          <h3>Thank you!</h3>
-          <p>Your response has been saved.<br>We have sent you a WhatsApp on your number. Let's talk there!!!.</p>
-          <button class="btn btn-primary" onclick="closeThankYou()">Close</button>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="form-step" id="step3">
+                    <h2>🌐 Your home language</h2>
+                    <label><input type="checkbox" name="language" value="Hindi"> Hindi</label>
+                    <label><input type="checkbox" name="language" value="English"> English</label>
+                    <label><input type="checkbox" name="language" value="Other"> Other (we'll discuss)</label>
+                    <div class="form-buttons">
+                        <button type="button" class="btn prev-btn" onclick="prevStep(3)">Back</button>
+                        <button type="button" class="btn" onclick="nextStep(3)">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="form-step" id="step4">
+                    <h2>📱 How can we reach you?</h2>
+                    <div class="phone-input-group">
+                        <select id="countryCode" name="countryCode" required>
+                            <option value="+91">IN +91</option>
+                            <option value="+1">US +1</option>
+                            <option value="+44">GB +44</option>
+                            <option value="+81">JP +81</option>
+                            <option value="+61">AU +61</option>
+                            <option value="+61">UAE +971</option>
+                        </select>
+                        <input type="tel" name="phone" id="phoneNumber" placeholder="Your phone number" required pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn prev-btn" onclick="prevStep(4)">Back</button>
+                        <button type="button" class="btn" onclick="validatePhone()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Final Submit -->
+                <div class="form-step" id="submitStep">
+                    <h2>✨ Ready to connect via WhatsApp!</h2>
+                    <p style="margin-bottom: 20px; color: #6b5555; line-height: 1.7;">We'll review your information and reach out soon using WhatsApp to schedule a warm conversation about how we can support your family.</p>
+                    <div class="form-buttons">
+                        <button type="button" class="btn prev-btn" onclick="prevStep(5)">Back</button>
+                        <button type="submit" class="btn">Send My Request 💕</button>
+                    </div>
+                </div>
+            </form>
         </div>
-      </section>
+    </section>
+
+
+
 
     <script>
         let currentStep = 1;
-        function openForm() {
-          const popup = document.getElementById("therapyForm");
-          popup.style.display = "flex";
-          currentStep = 1;
-          showStep(1);
-        }
-
-        // Hide the popup and reset step
-        function closeForm() {
-          const popup = document.getElementById("therapyForm");
-          popup.style.display = "none";
-
-          // Reset all steps' visibility to none
-          const steps = document.querySelectorAll(".form-step");
-          steps.forEach((el) => el.style.display = "none");
-
-          // Reset step to 1
-          currentStep = 1;
-        }
-
         // Show only the current step
         function showStep(step) {
         const steps = document.querySelectorAll(".form-step");
@@ -261,417 +210,361 @@
         function closeThankYou() {
           document.getElementById('thankYouNotification').style.display = 'none';
         }
+
+        // Pricing Calculator
+        function updatePricing() {
+            const sessions = document.getElementById('sessionSlider').value;
+            const pricePerSession = sessions >= 10 ? 550 : sessions >= 8 ? 600 : 650;
+            const totalPrice = sessions * pricePerSession;
+
+            document.getElementById('sessionsText').textContent = `${sessions} Sessions / Month`;
+            document.getElementById('priceText').textContent = `₹${totalPrice.toLocaleString()}`;
+            document.getElementById('perSessionText').textContent = `₹${pricePerSession} per session`;
+        }
+        const video = document.getElementById('therapyVideo');
+
+        video.addEventListener('click', () => {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen(); // Safari
+        } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen(); // IE
+        }
+
+        video.play();
+        });
+        function setCurrency(currency) {
+    // All supported currencies
+    const currencies = ['inr', 'usd', 'aed'];
+
+    // 1. Toggle price visibility
+    currencies.forEach(curr => {
+        const priceElements = document.querySelectorAll('.price-' + curr);
+        priceElements.forEach(el => {
+            el.style.display = (curr === currency) ? 'inline' : 'none';
+        });
+    });
+
+    // 2. Toggle active button state
+    currencies.forEach(curr => {
+        const btn = document.getElementById('btn' + curr.toUpperCase());
+        if (btn) {
+            btn.classList.toggle('active', curr === currency);
+        }
+    });
+}
+
+
+
     </script>
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-item">
+                <span class="trust-number">500+</span>
+                <span class="trust-label">Families We've Supported</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">15+</span>
+                <span class="trust-label">Languages We Honor</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">10</span>
+                <span class="trust-label">Years of Caring</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">98%</span>
+                <span class="trust-label">Happy Families</span>
+            </div>
+        </div>
+    </div>
 
+    <section class="how-it-works" id="how">
+        <div class="how-container">
+            <div class="how-header"  >
+                <h2>How Mother Tongue Works 💕</h2>
+                <p>Simple, effective online therapy designed for busy families</p>
+            </div>
 
-<div class="scroll-container">
-  <svg class="path-svg" viewBox="-100 0 500 1200" xmlns="http://www.w3.org/2000/svg">
-    <path 
-      d="M250 0 C350 200, 150 400, 250 600 S350 1000, 250 1200" 
-      class="glowing-dotted-path" />
-  </svg>
+            <div class="steps-grid" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>📞 Free Consultation</h3>
+                    <p>Book a 15-minute call with our speech therapist to discuss your child's needs and goals</p>
+                </div>
 
-  <div class="rolling-icon">
-  <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-    <rect x="10" y="20" width="44" height="24" fill="#5ea9ff" rx="8" ry="8" />
-    <circle cx="20" cy="48" r="8" fill="#333" />
-    <circle cx="44" cy="48" r="8" fill="#333" />
-  </svg>
-</div>
-</div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>📋 Assessment</h3>
+                    <p>We conduct a comprehensive speech evaluation in your preferred language (Hindi or English)</p>
+                </div>
 
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>🎯 Custom Plan</h3>
+                    <p>Get a personalized therapy plan tailored to your child's age, needs, and mother tongue</p>
+                </div>
 
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>💻 Online Sessions</h3>
+                    <p>30-minute interactive video sessions, 2-3 times per week, at your convenience</p>
+                </div>
 
-    <!-- Extra space for scroll -->
-    <!-- <div style="height: 3000px;"></div> -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>📈 Progress Tracking</h3>
+                    <p>Weekly reports and milestone updates so you can see your child's improvement</p>
+                </div>
 
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3>🏡 Home Activities</h3>
+                    <p>Fun practice exercises and games to reinforce learning between sessions</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="services" >
-        <div class="container">
+    <section class="approach" id="approach">
+    <div class="approach-container">
+        <div class="section-header">
+        <h2>Our Heartfelt Approach 🌸</h2>
+        <p>Let's see how our experienced RCI Certified therapists work:</p>
+        </div>
+
+        <video controls playsinline preload="metadata" style="width:100%;">
+        <source src="./video/Can_you_create_202601041733_h23rj (video-converter.com).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        <div class="section-header">
+        <p>A One on One Online speech therapy session works as good as a physical session, but with the comfort of your home, and at much cheaper prices.</p>
+        </div>
+    </div>
+    </section>
+    <section class="pricing-comparison" id="pricing">
+        <div class="pricing-container">
             <div class="section-header">
-                <h2 class="section-title wow fadeInDown">What we offer</h2>
-                <p class="wow fadeInDown">At MotherTongue, you get a wide variety of online therapy classes and more..<br></p>
-            </div>
-
-            <div class="row" onclick="openForm()">
-                <div class="features">
-                    <div class="row">
-                       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-comment"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Speech Therapy</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-puzzle-piece"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Fun activites</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-book"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Assignments</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
+                <h2>Why Families Choose MotherTongue 💰</h2>
+                <p>Quality speech therapy shouldn't break the bank. See how we compare to traditional offline therapy.</p>
                 
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-bullseye"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Progress Track</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
-                            </div>
+                <!-- Currency Toggle -->
+                <div class="currency-toggle">
+                    <button class="currency-btn active" onclick="setCurrency('inr')" id="btnINR">
+                        <span class="flag"></span>INR (₹)
+                    </button>
+                    <button class="currency-btn" onclick="setCurrency('usd')" id="btnUSD">
+                        <span class="flag"></span>USD ($)
+                    </button>
+                    <button class="currency-btn" onclick="setCurrency('aed')" id="btnAED">
+                        <span class="flag"></span>AED (د.إ)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Comparison Grid -->
+            <div class="comparison-grid">
+                <!-- Cost Comparison -->
+                <div class="comparison-row">
+                    <div class="comparison-box offline">
+                        <span class="icon-badge cross">✖</span>
+                        <div class="label">Traditional Offline Therapy</div>
+                        <div class="value">
+                            <span class="price-inr"><span class="currency">₹</span>2,500<span class="per">/session</span></span>
+                            <span class="price-usd" style="display:none;"><span class="currency">$</span>100<span class="per">/session</span></span>
+                            <span class="price-aed" style="display:none;">300 <span class="currency">AED</span><span class="per">/session</span></span>
+
                         </div>
-                    </div><!--/.col-md-4-->
+                        <div class="extra-costs">+ Travel costs + Parking</div>
+                    </div>
+                    <div class="comparison-box online" onclick="openPopupForm()">
+                        <span class="icon-badge tick">✓</span>
+                        <div class="badge-ribbon">Best Value</div>
+                        <div class="label">Mother Tongue Online</div>
+                        <div class="value highlight">
+                            <span class="price-inr"><span class="currency">₹</span>1500<span class="per">/session</span></span>
+                            <span class="price-usd" style="display:none;"><span class="currency">$</span>30<span class="per">/session</span></span>
+                            <span class="price-aed" style="display:none;">100 <span class="currency">AED</span><span class="per">/session</span></span>
 
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-briefcase"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Expert Therapists</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
-                            </div>
                         </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-volume-up"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Tech support</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
-                            </div>
+                        <div class="savings">
+                            <span class="price-inr">Save more than ₹1,000 per session!</span>
+                            <span class="price-usd" style="display:none;">Save more than $70 per session!</span>
+                            <span class="price-aed" style="display:none;">Save more than 200 AED per session!</span>
                         </div>
-                    </div><!--/.col-md-4--></div>
-                        <div class="col-md-12 text-center" style="margin-top: 30px;">
-                            <a class="btn btn-primary btn-lg" onclick="openForm()">Start My Free Evaluation</a>
-                        </div>
-                    </div><!--/.row-->
+                    </div>
+                </div>
 
+                <!-- Time Commitment -->
+                <div class="comparison-row">
+                    <div class="comparison-box offline">
+                        <span class="icon-badge cross">✖</span>
+                        <div class="label">Traditional Offline Therapy</div>
+                        <div class="value">Fixed Schedule + 1-2 hrs Travel</div>
+                        <div class="extra-costs">Rush hour traffic stress</div>
+                    </div>
+                    <div class="comparison-box online" onclick="openPopupForm()">
+                        <span class="icon-badge tick">✓</span>
+                        <div class="label">Mother Tongue Online</div>
+                        <div class="value highlight">60 mins • Zero Travel</div>
+                        <div class="savings">From your home comfort!</div>
+                    </div>
+                </div>
 
-        </div><!--/.container-->
-    </section><!--/#services-->
+                <!-- Convenience -->
+                <div class="comparison-row">
+                    <div class="comparison-box offline">
+                        <span class="icon-badge cross">✖</span>
+                        <div class="label">Traditional Offline Therapy</div>
+                        <div class="value">Clinic Hours Only (9 AM - 6 PM)</div>
+                        <div class="extra-costs">Miss work or school</div>
+                    </div>
+                    <div class="comparison-box online" onclick="openPopupForm()">
+                        <span class="icon-badge tick">✓</span>
+                        <div class="label">Mother Tongue Online</div>
+                        <div class="value highlight">Flexible Evenings & Weekends</div>
+                        <div class="savings">Fits your family schedule!</div>
+                    </div>
+                </div>
 
-<section id="experts">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title wow fadeInDown">Our Expert Therapists</h2>
-      <p class="wow fadeInDown">Best therapists from across the country <br> .. </p>
-    </div>
+                <!-- Language Options -->
+                <div class="comparison-row">
+                    <div class="comparison-box offline">
+                        <span class="icon-badge cross">✖</span>
+                        <div class="label">Traditional Offline Therapy</div>
+                        <div class="value">Limited Mother Tongue Therapists</div>
+                        <div class="extra-costs">Hard to find Hindi speakers</div>
+                    </div>
+                    <div class="comparison-box online" onclick="openPopupForm()">
+                        <span class="icon-badge tick">✓</span>
+                        <div class="label">Mother Tongue Online</div>
+                        <div class="value highlight">Specialized Hindi & English Experts</div>
+                        <div class="savings">True bilingual support!</div>
+                    </div>
+                </div>
 
-    <!-- Expert 1 row -->
-    <div class="row align-items-center mb-5" onclick="openForm()">
-        <div class ="expert-wrapper">
-      <div class="col-md-6 col-sm-12">
-        <div class="expert-box">
-          <div class="pull-left">
-            <i class="fa fa-user-md"></i>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Urvashi Gupta</h4>
+                <!-- Parent Involvement -->
+                <div class="comparison-row">
+                    <div class="comparison-box offline">
+                        <span class="icon-badge cross">✖</span>
+                        <div class="label">Traditional Offline Therapy</div>
+                        <div class="value">Parents Wait Outside</div>
+                        <div class="extra-costs">Limited insight into progress</div>
+                    </div>
+                    <div class="comparison-box online" onclick="openPopupForm()">
+                        <span class="icon-badge tick">✓</span>
+                        <div class="label">Mother Tongue Online</div>
+                        <div class="value highlight">Parents Actively Participate</div>
+                        <div class="savings">Learn techniques to help at home!</div>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="comparison-row">
+                    <div class="comparison-box offline">
+                        <span class="icon-badge cross">✖</span>
+                        <div class="label">Traditional Offline Therapy</div>
+                        <div class="value">Support During Sessions Only</div>
+                        <div class="extra-costs">No follow-up between visits</div>
+                    </div>
+                    <div class="comparison-box online" onclick="openPopupForm()">
+                        <span class="icon-badge tick">✓</span>
+                        <div class="label">Mother Tongue Online</div>
+                        <div class="value highlight">Chat Support Between Sessions</div>
+                        <div class="savings">Questions answered anytime!</div>
+                    </div>
+                </div>
+            </div>
+
             
-            <p>Lead Trainer with 10+ years of experience in onsite and hybrid therapy.</p>
-            <div class="hover-container">
-              <div class="hover-paragraph">Specializes in stuttering, articulation disorders, and bilingual therapy techniques.</div>
-              <div class="hover-paragraph">Helps with fluency shaping and parental counseling.</div>
-              <div class="hover-paragraph">Conducts online workshops for professionals.</div>
+
+            <div class="pricing-cta">
+                <button class="btn-large" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">Start Saving Today - Let's Connect 💕</button>
             </div>
+        </div>
+    </section>
+
+<section class="expert-container-new" id="expert">
+  <div class="expert-wrapper">
+
+    <div class="section-header">
+      <h2>Meet Your Therapist 💖</h2>
+      <p>Certified professionals who nurture confidence, clarity and joyful communication.</p>
+    </div>
+
+    <div class="expert-card">
+      <div class="expert-photo">
+        <img src="./images/team/02.jpg" alt="Speech Therapist">
+      </div>
+
+      <div class="expert-info">
+        <h2>Ms Urvashi Gupta</h2>
+        <h3>Senior Speech Therapist</h3>
+
+        <div class="expert-carousel">
+          <div class="carousel-track">
+            <div class="carousel-item">RCI Certified</div>
+            <div class="carousel-item">10+ Years of Experience</div>
+            <div class="carousel-item">1000+ Patients Treated</div>
           </div>
         </div>
+        <burron class="btn" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">Let's Talk</a>
       </div>
-
-      <div class="col-md-6 col-sm-12">
-            <blockquote class="big-quote">
-            "Therapy isn't just a profession, it's a passion for transforming lives through speech."
-            </blockquote>
+        <div class="expert-photo">
+        <img src="./images/banner/rci.png" alt="RCI Certification">
       </div>
-      </div>
+    <!-- <div class="expert-socials">
+    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
-
-    <!-- Expert 2 row -->
-    <div class="row align-items-center mb-5" onclick="openForm()">
-        <div class ="expert-wrapper">
-      <div class="col-md-6 col-sm-12">
-        <div class="expert-box">
-          <div class="pull-left">
-            <i class="fa fa-user-md"></i>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Rahul Mehta</h4>
-            <p>Therapy Specialist focused on early intervention and language development.</p>
-            <div class="hover-container">
-              <div class="hover-paragraph">Experienced in autism spectrum therapy and parent-guided speech programs.</div>
-              <div class="hover-paragraph">Skilled in non-verbal communication techniques and assistive technologies.</div>
-              <div class="hover-paragraph">Trains caregivers for at-home language stimulation activities.</div>
-            </div>
-          </div>
         </div>
-      </div>
-
-    
-      <div class="col-md-6 col-sm-12">
-            <blockquote class="big-quote">
-            "Every child's voice is worth hearing; our job is to help them find it."
-            </blockquote>
-      </div>
-    </div>
-    </div>
-
-    <!-- Add more expert + quote pairs here -->
+    </div> -->
 
   </div>
 </section>
-<section id="pricing">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title wow fadeInDown">Pricing</h2>
-      <p class="wow fadeInDown">
-        Why choose offline therapy when our Online Therapy is faster, cheaper, and more convenient? See how they stack up below!
-      </p>
-    </div>
-
-    <!-- Feature Comparison Cards -->
-    <div class="comparison-grid" >
-
-      <div class="comparison-row">
-        <!-- <div class="feature-title">Cost</div> -->
-
-        <div class="comparison-box offline">
-          <span class="cross">✖</span>
-          <div class="label">Offline Therapy</div>
-          <div class="value"><span class="currency">$</span>150<span class="per">/month</span></div>
-        </div>
-        <div class="comparison-box online" onclick="openForm()" >
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value"><span class="currency">$</span>45<span class="per">/month</span></div>
-        </div>
-      </div>
-
-      <div class="comparison-row">
-        <!-- <div class="feature-title">Time Commitment</div> -->
-
-        <div class="comparison-box offline">
-          <span class="cross">✖</span>
-          <div class="label">Offline Therapy</div>
-          <div class="value">Fixed Schedule + Travel</div>
-        </div>
-        <div class="comparison-box online" onclick="openForm()" >
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">Flexible (No Travel)</div>
-        </div>
-      </div>
-
-      <div class="comparison-row">
-        <!-- <div class="feature-title">Energy Consumption</div> -->
-
-        <div class="comparison-box offline">
-          <span class="cross">✖</span>
-          <div class="label">Offline Therapy</div>
-          <div class="value">Energy Spent on Travel</div>
-        </div>
-        <div class="comparison-box online" onclick="openForm()" >
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">No Commuting</div>
-        </div>
-      </div>
-
-      <div class="comparison-row">
-        <!-- <div class="feature-title">Convenience</div> -->
-
-        <div class="comparison-box offline">
-          <span class="cross">✖</span>
-          <div class="label">Offline Therapy</div>
-          <div class="value">Requires Travel</div>
-        </div>
-        <div class="comparison-box online" onclick="openForm()" >
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">Access from Anywhere</div>
-        </div>
-      </div>
-
-      <div class="comparison-row">
-        <!-- <div class="feature-title">Session Length</div> -->
-
-        <div class="comparison-box offline">
-          <span class="cross">✖</span>
-          <div class="label">Offline Therapy</div>
-          <div class="value">Time-Limited</div>
-        </div>
-        <div class="comparison-box online" onclick="openForm()" >
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">Unlimited Access</div>
-        </div>
-      </div>
-
-      <div class="comparison-row">
-        <!-- <div class="feature-title">Support Availability</div> -->
-
-        <div class="comparison-box offline">
-          <span class="cross">✖</span>
-          <div class="label">Offline Therapy</div>
-          <div class="value">Limited Hours</div>
-        </div>
-        <div class="comparison-box online" onclick="openForm()" >
-          <span class="tick">✔</span>
-          <div class="label">Online Therapy</div>
-          <div class="value">24/7 Support</div>
-        </div>
-      </div>
-    </div>
-    <a class="btn btn-primary btn-lg" onclick="openForm()">Get Best Prices for the Best Treatment</a>
-    <!-- Pricing Plans (unchanged, optional edits later) -->
 
 </section>
+    <section class="final-cta">
+        <h2>Let's Give Our Loved One's The Therapy They Deserve 💕</h2>
+        <p>Every conversation begins with a single word. Let's start yours today—we're here to listen, support, and celebrate your journey.</p>
+        <button class="btn" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">Let's Begin Our Journey</button>
+    </section>
 
-
-
-
-<!--/#pricing-->
-
-
-
-<!--/#experts-->
-
-  <section id="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title wow fadeInDown">Gallery</h2>
-                <!-- <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p> -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div class="footer-brand">💕 MotherTongue Speech</div>
+                <p class="footer-desc">Professional speech and language services delivered with heart, supporting multilingual families with warmth and expertise.</p>
             </div>
-                <div class="carousel-wrapper" onclick="openForm()">
-                <div class="carousel-track">
-                    <!-- Original -->
-                    <div class="gallery-item"><img src="images/gallery/01.jpg"></div>
-                    <div class="gallery-item"><img src="images/gallery/02.jpg"></div>
-                    <div class="gallery-item"><img src="images/gallery/03.jpg"></div>
-                    <div class="gallery-item"><img src="images/gallery/04.jpg"></div>
-                    <!-- Duplicated -->
-                    <div class="gallery-item"><img src="images/gallery/01.jpg"></div>
-                    <div class="gallery-item"><img src="images/gallery/02.jpg"></div>
-                    <div class="gallery-item"><img src="images/gallery/03.jpg"></div>
-                    <div class="gallery-item"><img src="images/gallery/04.jpg"></div>
-                </div>
-                </div>
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <a href="#">Speech Therapy</a>
+                <a href="#">Assessments</a>
+                <a href="#">Family Coaching</a>
+                <a href="#">Parent Workshops</a>
             </div>
-            
-
-                
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="#">Parent Guides</a>
+                <a href="#">Blog & Stories</a>
+                <a href="#">Common Questions</a>
+                <a href="#">Research & Insights</a>
             </div>
-        </div><!--/.container-->
-    </section><!--/#gallery-->
-
-  
-    <section class="reviews-area" id="reviews">
-			<div class="container">
-				<div class="section-header">
-                <h2 class="section-title wow fadeInDown">What parents say about us</h2>
-                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <a href="mailto:hello@MotherTongue.com">hello@MotherTongue.com</a>
+                <a href="tel:5551234567">(555) 123-4567</a>
+                <a href="#">Find Our Locations</a>
             </div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="single-reviews animate_fade_in" style="opacity: 1; right: 0px;">
-							<div class="row">
-								<div class="col-xs-12">
-									<blockquote>Sontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-3">
-									<img src="images/pic1.jpg" alt="client">
-								</div>
-								<div class="col-xs-9 half-gutter">
-									<h5>John Bond</h5>
-									<h6>Lorem Ipsuis simply</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-reviews animate_fade_in" style="opacity: 1; right: 0px;">
-							<div class="row">
-								<div class="col-xs-12">
-									<blockquote>Tontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-3">
-									<img src="images/pic2.jpg" alt="client">
-								</div>
-								<div class="col-xs-9 half-gutter">
-									<h5>John Bond</h5>
-									<h6>Lorem Ipsuis simply</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-reviews animate_fade_in" style="opacity: 1; right: 0px;">
-							<div class="row">
-								<div class="col-xs-12">
-									<blockquote>Aontrary to popular belief, Lorem Ipsuis no simply random text. It has roots in a piece of classical Layears old. belief, Lorem Ipsuis not simply</blockquote>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-3">
-									<img src="images/pic1.jpg" alt="client">
-								</div>
-								<div class="col-xs-9 half-gutter">
-									<h5>John Bond</h5>
-									<h6>Lorem Ipsuis simply</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-  
-    </footer><!--/#footer-->
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 MotherTongue. Caring for children's voices with professional expertise and endless heart.</p>
+        </div>
+    </footer>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
-    <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/custom-scripts.js"></script>
-    <script src="js/formOpen.js"></script>
-      
-      
-      
-      
-      
-      
+    
 </body>
 </html>
+
+
