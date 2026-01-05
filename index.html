@@ -192,20 +192,20 @@
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
-          })
-          .then(res => res.json())
-          .then(response => {
-            if (response.success) {
-              console.log('Response saved successfully');
-              console.log(response);
-              document.getElementById('thankYouNotification').style.display = 'block';
-              document.getElementById('myForm').style.display = 'none';
-            } else {
-              alert('There was an error saving your response.');
-            }
-          })
-          .catch(() => alert('Could not connect to the server.'));
-        });
+            })
+            .then(async res => {
+            const text = await res.text();   // <— IMPORTANT
+            if (!res.ok) throw new Error(text || 'Request failed');
+            return text ? JSON.parse(text) : { success: true };
+            })
+            .then(response => {
+            document.getElementById('thankYouNotification').style.display = 'block';
+            document.getElementById('myForm').style.display = 'none';
+            })
+            .catch(err => {
+            console.error('SERVER ERROR:', err);
+            alert('Could not connect to the server.');
+            });
 
         function closeThankYou() {
           document.getElementById('thankYouNotification').style.display = 'none';
