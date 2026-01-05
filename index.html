@@ -192,8 +192,8 @@
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
-            })
-            .then(async res => {
+          })
+          .then(async res => {
             const text = await res.text();   // <— IMPORTANT
             if (!res.ok) throw new Error(text || 'Request failed');
             return text ? JSON.parse(text) : { success: true };
@@ -206,7 +206,7 @@
             console.error('SERVER ERROR:', err);
             alert('Could not connect to the server.');
             });
-
+        });
         function closeThankYou() {
           document.getElementById('thankYouNotification').style.display = 'none';
         }
