@@ -125,6 +125,14 @@
     </section>
 
 
+    <section>
+    <div id="thankYouNotification" class="thank-you-modal">
+        <h3>Thank you!</h3>
+        <p>Your response has been saved.<br>
+        We have sent you a WhatsApp on your number. Let's talk there!!!</p>
+        <button class="btn" onclick="closeThankYou()">Close</button>
+    </div>
+    </section>
 
 
     <script>
@@ -154,13 +162,32 @@
 
         // Close form when clicking outside the form container
         window.addEventListener("click", function (e) {
-        const popup = document.getElementById("myForm");
         const formContainer = popup.querySelector(".form-container");
-        if (e.target === popup) {
-            closeForm();
-        }
         });
-          function validatePhone() {
+        function resetTherapyForm() {
+        const form = document.getElementById("therapyForm");
+
+        // Reset all inputs
+        form.reset();
+
+        // Fully hide ALL steps
+        document.querySelectorAll(".form-step").forEach(step => {
+            step.classList.remove("active");
+            step.style.display = "none";      // 🔥 force hide
+        });
+
+        // Show ONLY step 1
+        const first = document.getElementById("step1");
+        first.style.display = "block";
+        first.classList.add("active");
+
+        // Make form visible
+        form.style.display = "block";
+        }
+
+
+
+        function validatePhone() {
             const phoneInput = document.getElementById('phoneNumber');
             const phone = phoneInput.value.trim();
             const isValid = /^[0-9]{10}$/.test(phone);
@@ -171,7 +198,7 @@
             return;
             }
             nextStep(4); // Move to Step 5 if valid
-        }
+    }
 
         // Handle form submission
         document.getElementById('therapyForm').addEventListener('submit', function(e) {
@@ -193,22 +220,23 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
           })
-          .then(async res => {
-            const text = await res.text();   // <— IMPORTANT
-            if (!res.ok) throw new Error(text || 'Request failed');
-            return text ? JSON.parse(text) : { success: true };
-            })
-            .then(response => {
-            document.getElementById('thankYouNotification').style.display = 'block';
-            document.getElementById('myForm').style.display = 'none';
-            })
-            .catch(err => {
-            console.error('SERVER ERROR:', err);
-            alert('Could not connect to the server.');
-            });
+          .then(res => res.json())
+          .then(response => {
+            if (response.success) {
+              console.log('Response saved successfully');
+              console.log(response);
+              document.getElementById('thankYouNotification').style.display = 'block';
+              resetTherapyForm();
+            } else {
+              alert('There was an error saving your response.');
+            }
+          })
+          .catch(() => alert('Could not connect to the server.'));
         });
+
         function closeThankYou() {
           document.getElementById('thankYouNotification').style.display = 'none';
+          resetTherapyForm();
         }
 
         // Pricing Calculator
