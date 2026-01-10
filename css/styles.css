@@ -465,6 +465,113 @@ nav {
   to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
+.right-place {
+  background: white;
+  /* background: linear-gradient(180deg, #fff7fa 0%, #ffffff 100%); */
+  padding: clamp(60px, 8vw, 100px) 20px;
+}
+
+.right-place-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* .right-place h2 {
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  color: #c9184a;
+  margin-bottom: 12px;
+} */
+
+.right-sub {
+  color: #6b5555;
+  font-size: clamp(1rem, 3.8vw, 1.15rem);
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+
+.reassurance-box {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe4e8 100%);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    border: 3px solid #ff6b9d;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.reassurance-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.3);
+}
+.reassurance-box p {
+  margin: 10px 0;
+  font-size: clamp(1rem, 3.8vw, 1.1rem);
+  color: black;
+}
+
+.reassurance-box .strong {
+  margin-top: 16px;
+  font-weight: 600;
+  color:linear-gradient(135deg, #ff6b9d 0%, #c9184a 100%);
+}
+.diagnosis-bridge {
+  margin-bottom: 45px;
+}
+
+.bridge-title {
+  font-weight: 600;
+  color:linear-gradient(135deg, #ff6b9d 0%, #c9184a 100%);
+  margin-bottom: 14px;
+}
+
+.diagnosis-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.diagnosis-tags span {
+  background: #ffe6ee;
+  background:linear-gradient(135deg, #ff6b9d 0%, #c9184a 100%);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 14px rgba(255,107,157,0.15);
+}
+
+.mirror-dual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-bottom: 45px;
+
+}
+
+/* .mirror-column h3 {
+  color:linear-gradient(135deg, #ff6b9d 0%, #c9184a 100%);
+  margin-bottom: 14px;
+} */
+
+.playful .mirror-item {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffe4e8 100%);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 25px;
+    text-align: center;
+    border: 3px solid #ff6b9d;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.playful .mirror-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 107, 157, 0.12);   
+}
+
+
 /* Trust Indicators */
 .trust-bar {
     padding: 100px 40px 40px;
@@ -507,7 +614,7 @@ nav {
 /* Approach Section */
 .approach {
     
-    /* background: white; */
+    background: white;
     /* background-image: url("../images/banner/bg2.png"); */
     padding: 100px 40px;
 
@@ -553,7 +660,7 @@ nav {
 .expert-container-new {
     padding: 100px 40px;
     margin: 80px 0;
-    /* background-color: white; */
+    background-color: white;
 }
 
 .expert-wrapper {
@@ -730,7 +837,7 @@ footer {
     text-align: center;
 }
 .how-it-works {
-    background: white;
+    /* background: white; */
     padding: 100px 40px;
     /* margin: 80px 0; */
 }
@@ -914,17 +1021,41 @@ input[type="range"]::-webkit-slider-thumb {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
 }
+.video-wrap { position: relative; }
 
-.video-section {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 0 20px;
+.tap-unmute {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: #c9184a;
+  background: rgba(255,245,247,.65);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: .4s ease;
+}
+
+.video-wrap.show-unmute .tap-unmute {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .video-section video {
   width: 100%;
-  border-radius: 16px;
-  cursor: pointer;
+  border-radius: 18px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.video-section video.playing {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -958,7 +1089,7 @@ input[type="range"]::-webkit-slider-thumb {
 .pricing-comparison {
     padding: 100px 40px;
     margin: 80px 0;
-    background: white;
+    /* background: white; */
 }
 
 .pricing-container {

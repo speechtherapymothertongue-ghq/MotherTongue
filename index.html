@@ -38,6 +38,7 @@
         </div>
             <div class="nav-links">
                 <a href="#hero">Home</a>
+                <a href="#rightplace">Do you need us?</a>
                 <a href="#how">What we do</a>
                 <a href="#approach">Our Approach</a>
                 <a href="#pricing">Pricing</a>
@@ -77,7 +78,9 @@
                     <label><input type="checkbox" name="therapy" value="Stammering"> Stammering</label>
                     <label><input type="checkbox" name="therapy" value="Fast speech"> Fast speech</label>
                     <label><input type="checkbox" name="therapy" value="Speech delay"> Speech delay</label>
-                    <label><input type="checkbox" name="therapy" value="Stroke/Trauma injury"> Stroke or injury recovery</label>
+                    <label><input type="checkbox" name="therapy" value="ADHD"> ADHD</label>
+                    <label><input type="checkbox" name="therapy" value="ASD"> Autism Spectrum Disorder</label>
+                    <!-- <label><input type="checkbox" name="therapy" value="Stroke/Trauma injury"> Stroke or injury recovery</label> -->
                     <label><input type="checkbox" name="therapy" value="Developmental delay"> Developmental concerns</label>
                     <label><input type="checkbox" name="therapy" value="Reading/Writing difficulty"> Reading or writing challenges</label>
                     <div class="form-buttons">
@@ -143,169 +146,67 @@
     </div>
     </section>
 
+<section class="right-place playful" id="rightplace">
+  <div class="right-place-inner">
 
-    <script>
-        const scrollBtn = document.getElementById("scrollBtn");
+    <h2>✨ You might be in the right place ✨</h2>
+    <p class="right-sub">
+      Different ages. Different lives. Same need — to be understood.
+    </p>
 
-        window.addEventListener("scroll", () => {
-        scrollBtn.style.display = window.scrollY > window.innerHeight * 0.6 ? "block" : "none";
-        });
+    <div class="mirror-dual" >
 
-        scrollBtn.addEventListener("click", () => {
-        document.querySelector("#hero").scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-        });
+      <!-- CHILDREN -->
+      <div class="mirror-column">
+        <h3>🧸 For Children & Families</h3>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">My child understands but speaks very little</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">My child mixes multiple languages while speaking</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">My child gets frustrated trying to express needs</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">My child repeats words but doesn’t use them meaningfully</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">Speech seems delayed compared to others</div>
+      </div>
 
-        let currentStep = 1;
-        // Show only the current step
-        function showStep(step) {
-        const steps = document.querySelectorAll(".form-step");
-        steps.forEach((el, index) => {
-            el.style.display = (index === step - 1) ? "block" : "none";
-        });
-        }
+      <!-- ADULTS -->
+      <div class="mirror-column">
+        <h3>🧑‍💼 For Teens, Adults & Professionals</h3>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">I struggle to express ideas clearly</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">People ask me to repeat myself often</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">My accent affects my confidence</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">I avoid meetings or presentations</div>
+        <div class="mirror-item" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">A stroke or injury changed my speech</div>
+      </div>
 
-        // Go to the next step
-        function nextStep(step) {
-        currentStep = step + 1;
-        showStep(currentStep);
-        }
+    </div>
 
-        // Go to the previous step (if you implement Back buttons)
-        function prevStep(step) {
-        currentStep = step - 1;
-        showStep(currentStep);
-        }
-        document.addEventListener("DOMContentLoaded", () => {
-          showStep(1);
-        });
+    <div class="diagnosis-bridge">
+      <p class="bridge-title">These may be signs of:</p>
+      <div class="diagnosis-tags">
+        <span>Speech Delay</span>
+        <span>Late Talking</span>
+        <span>Autism Spectrum</span>
+        <span>ADHD</span>
+        <span>Apraxia</span>
+        <span>Fluency Disorders</span>
+        <span>Accent Modification</span>
+        <span>Post-Stroke Aphasia</span>
+      </div>
+      <p class="bridge-note">A gentle evaluation brings clarity — and a plan.</p>
+    </div>
 
-        // Close form when clicking outside the form container
-        function resetTherapyForm() {
-        const form = document.getElementById("therapyForm");
+    <div class="reassurance-box playful-reassurance">
+      <p>🌈 You are not late, you are not alone.</p>
+      <p>Everyone deserves to be heard — clearly, confidently, comfortably.</p>
+      <p class="strong">And you've already taken the bravest first step.</p>
+    </div>
 
-        // Reset all inputs
-        form.reset();
-
-        // Fully hide ALL steps
-        document.querySelectorAll(".form-step").forEach(step => {
-            step.classList.remove("active");
-            step.style.display = "none";      // 🔥 force hide
-        });
-
-        // Show ONLY step 1
-        const first = document.getElementById("step1");
-        first.style.display = "block";
-        first.classList.add("active");
-
-        // Make form visible
-        form.style.display = "block";
-        }
+  </div>
 
 
 
-        function validatePhone() {
-            const phoneInput = document.getElementById('phoneNumber');
-            const phone = phoneInput.value.trim();
-            const isValid = /^[0-9]{10}$/.test(phone);
-
-            if (!isValid) {
-            alert("Please enter a valid 10-digit phone number.");
-            phoneInput.focus();
-            return;
-            }
-            nextStep(4); // Move to Step 5 if valid
-    }
-
-        // Handle form submission
-        document.getElementById('therapyForm').addEventListener('submit', function(e) {
-          
-          e.preventDefault();
-          // Gather form data
-          const form = e.target;
-          const person = Array.from(form.querySelectorAll('input[name="person"]:checked')).map(cb => cb.value);
-          const therapy = Array.from(form.querySelectorAll('input[name="therapy"]:checked')).map(cb => cb.value);
-          const language = Array.from(form.querySelectorAll('input[name="language"]:checked')).map(cb => cb.value);
-          const countrycode = form.querySelector('select[name="countryCode"]').value;
-          const phone = form.querySelector('input[name="phone"]').value.trim();
-          const fullphone = countrycode + phone;
-          console.log(fullphone);
-          const data = { person, therapy, language, fullphone, timestamp: new Date().toISOString().slice(0,19) };
-
-          fetch('https://d3rcgssc7fshw6.cloudfront.net/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          })
-          .then(res => res.json())
-          .then(response => {
-            if (response.success) {
-              console.log('Response saved successfully');
-              console.log(response);
-              document.getElementById('thankYouNotification').style.display = 'block';
-              resetTherapyForm();
-            } else {
-              alert('There was an error saving your response.');
-            }
-          })
-          .catch(() => alert('Could not connect to the server.'));
-        });
-
-        function closeThankYou() {
-          document.getElementById('thankYouNotification').style.display = 'none';
-          resetTherapyForm();
-        }
-
-        // Pricing Calculator
-        function updatePricing() {
-            const sessions = document.getElementById('sessionSlider').value;
-            const pricePerSession = sessions >= 10 ? 550 : sessions >= 8 ? 600 : 650;
-            const totalPrice = sessions * pricePerSession;
-
-            document.getElementById('sessionsText').textContent = `${sessions} Sessions / Month`;
-            document.getElementById('priceText').textContent = `₹${totalPrice.toLocaleString()}`;
-            document.getElementById('perSessionText').textContent = `₹${pricePerSession} per session`;
-        }
-        const video = document.getElementById('therapyVideo');
-
-        // video.addEventListener('click', () => {
-        // if (video.requestFullscreen) {
-        //     video.requestFullscreen();
-        // } else if (video.webkitRequestFullscreen) {
-        //     video.webkitRequestFullscreen(); // Safari
-        // } else if (video.msRequestFullscreen) {
-        //     video.msRequestFullscreen(); // IE
-        // }
-
-        // video.play();
-        // });
-        function setCurrency(currency) {
-    // All supported currencies
-    const currencies = ['inr', 'usd', 'aed'];
-
-    // 1. Toggle price visibility
-    currencies.forEach(curr => {
-        const priceElements = document.querySelectorAll('.price-' + curr);
-        priceElements.forEach(el => {
-            el.style.display = (curr === currency) ? 'inline' : 'none';
-        });
-    });
-
-    // 2. Toggle active button state
-    currencies.forEach(curr => {
-        const btn = document.getElementById('btn' + curr.toUpperCase());
-        if (btn) {
-            btn.classList.toggle('active', curr === currency);
-        }
-    });
-}
+</section>
 
 
-
-    </script>
-
+    
 
     <section class="how-it-works" id="how">
         <div class="how-container">
@@ -361,10 +262,13 @@
         <p>Let's see how our experienced RCI Certified therapists work:</p>
         </div>
 
-        <video controls playsinline preload="metadata" style="width:100%;">
-        <source src="./video/Can_you_create_202601041733_h23rj (video-converter.com).mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
+        <div class="video-wrap">
+            <video controls playsinline preload="metadata" style="width:100%;" id="therapyVideo" muted>
+            <source src="./video/Can_you_create_202601041733_h23rj (video-converter.com).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <div id="tapToUnmute" class="tap-unmute">🔊 Tap for sound</div>
+        </div>
         <div class="section-header">
         <p>A One on One Online speech therapy session works as good as a physical session, but with the comfort of your home, and at much cheaper prices.</p>
         </div>
@@ -608,7 +512,196 @@
             <p>© 2026 MotherTongue Speech. Online Speech Therapy. From babbles to brilliant.</p>
         </div>
     </footer>
+<script>
+        const scrollBtn = document.getElementById("scrollBtn");
 
+        window.addEventListener("scroll", () => {
+        scrollBtn.style.display = window.scrollY > window.innerHeight * 0.6 ? "block" : "none";
+        });
+
+        scrollBtn.addEventListener("click", () => {
+        document.querySelector("#hero").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+        });
+
+        let currentStep = 1;
+        // Show only the current step
+        function showStep(step) {
+        const steps = document.querySelectorAll(".form-step");
+        steps.forEach((el, index) => {
+            el.style.display = (index === step - 1) ? "block" : "none";
+        });
+        }
+
+        // Go to the next step
+        function nextStep(step) {
+        currentStep = step + 1;
+        showStep(currentStep);
+        }
+
+        // Go to the previous step (if you implement Back buttons)
+        function prevStep(step) {
+        currentStep = step - 1;
+        showStep(currentStep);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+          showStep(1);
+        });
+
+        // Close form when clicking outside the form container
+        function resetTherapyForm() {
+        const form = document.getElementById("therapyForm");
+
+        // Reset all inputs
+        form.reset();
+
+        // Fully hide ALL steps
+        document.querySelectorAll(".form-step").forEach(step => {
+            step.classList.remove("active");
+            step.style.display = "none";      // 🔥 force hide
+        });
+
+        // Show ONLY step 1
+        const first = document.getElementById("step1");
+        first.style.display = "block";
+        first.classList.add("active");
+
+        // Make form visible
+        form.style.display = "block";
+        }
+
+
+
+        function validatePhone() {
+            const phoneInput = document.getElementById('phoneNumber');
+            const phone = phoneInput.value.trim();
+            const isValid = /^[0-9]{10}$/.test(phone);
+
+            if (!isValid) {
+            alert("Please enter a valid 10-digit phone number.");
+            phoneInput.focus();
+            return;
+            }
+            nextStep(4); // Move to Step 5 if valid
+    }
+
+        // Handle form submission
+        document.getElementById('therapyForm').addEventListener('submit', function(e) {
+          
+          e.preventDefault();
+          // Gather form data
+          const form = e.target;
+          const person = Array.from(form.querySelectorAll('input[name="person"]:checked')).map(cb => cb.value);
+          const therapy = Array.from(form.querySelectorAll('input[name="therapy"]:checked')).map(cb => cb.value);
+          const language = Array.from(form.querySelectorAll('input[name="language"]:checked')).map(cb => cb.value);
+          const countrycode = form.querySelector('select[name="countryCode"]').value;
+          const phone = form.querySelector('input[name="phone"]').value.trim();
+          const fullphone = countrycode + phone;
+          console.log(fullphone);
+          const data = { person, therapy, language, fullphone, timestamp: new Date().toISOString().slice(0,19) };
+
+          fetch('https://d3rcgssc7fshw6.cloudfront.net/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          })
+          .then(res => res.json())
+          .then(response => {
+            if (response.success) {
+              console.log('Response saved successfully');
+              console.log(response);
+              document.getElementById('thankYouNotification').style.display = 'block';
+              resetTherapyForm();
+            } else {
+              alert('There was an error saving your response.');
+            }
+          })
+          .catch(() => alert('Could not connect to the server.'));
+        });
+
+        function closeThankYou() {
+          document.getElementById('thankYouNotification').style.display = 'none';
+          resetTherapyForm();
+        }
+
+        // Pricing Calculator
+        function updatePricing() {
+            const sessions = document.getElementById('sessionSlider').value;
+            const pricePerSession = sessions >= 10 ? 550 : sessions >= 8 ? 600 : 650;
+            const totalPrice = sessions * pricePerSession;
+
+            document.getElementById('sessionsText').textContent = `${sessions} Sessions / Month`;
+            document.getElementById('priceText').textContent = `₹${totalPrice.toLocaleString()}`;
+            document.getElementById('perSessionText').textContent = `₹${pricePerSession} per session`;
+        }
+
+        function setCurrency(currency) {
+    // All supported currencies
+        const currencies = ['inr', 'usd', 'aed'];
+
+        // 1. Toggle price visibility
+        currencies.forEach(curr => {
+            const priceElements = document.querySelectorAll('.price-' + curr);
+            priceElements.forEach(el => {
+                el.style.display = (curr === currency) ? 'inline' : 'none';
+            });
+        });
+
+    // 2. Toggle active button state
+        currencies.forEach(curr => {
+            const btn = document.getElementById('btn' + curr.toUpperCase());
+            if (btn) {
+                btn.classList.toggle('active', curr === currency);
+            }
+        });
+}
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("therapyVideo");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            video.play().catch(()=>{});
+            video.classList.add("playing");
+        } else {
+            video.pause();
+        }
+        });
+    }, { threshold: 0.6 });
+
+    observer.observe(video);
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("therapyVideo");
+    const hint  = document.getElementById("tapToUnmute");
+    let audioUnlocked = false;
+
+    // Show unmute hint once video is playing
+    video.addEventListener("play", () => {
+        if (!audioUnlocked) {
+        document.querySelector(".video-wrap").classList.add("show-unmute");
+        }
+    });
+
+    // Unlock sound on FIRST user interaction anywhere
+    const unlockAudio = () => {
+        audioUnlocked = true;
+        video.muted = false;
+        hint.style.display = "none";
+
+        window.removeEventListener("touchstart", unlockAudio);
+        window.removeEventListener("click", unlockAudio);
+    };
+
+    window.addEventListener("touchstart", unlockAudio, { once:true });
+    window.addEventListener("click", unlockAudio, { once:true });
+    });
+
+
+    </script>
     
 </body>
 </html>
