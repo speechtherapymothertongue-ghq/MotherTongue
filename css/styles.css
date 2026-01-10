@@ -193,33 +193,38 @@ nav {
 
 /* Hero Section */
 .hero {
-  padding: 10px 10px;  
-  width: 100%;
-  background-image: url("../images/banner/bg2.png");
-  background-size: cover;
-  background-position: center;
   position: relative;
-
+  width: 100%;
+  padding: clamp(14px, 4vw, 32px);
+  background: url("../images/banner/bg2.png") center / cover no-repeat;
+  isolation: isolate;              
 }
 
-.hero-inner{
-    margin-top: 80px;
-    padding: 10px 40px 40px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    position: relative;
+.hero-inner {
+  max-width: 1200px;
+  margin: 40px;
+  padding: clamp(14px, 4vw, 40px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 6vw, 60px);
+  align-items: center;
+  position: relative;
 }
-.hero::before {
-  content: '';
+
+.hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(255,255,255,0.78);
   z-index: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background: rgba(255,255,255,0.78); */
+  /* z-index: -1; */
 }
 
 .hero-content h1 {
@@ -1716,5 +1721,12 @@ html, body {
 @media (max-width: 600px) {
   .btn, .btn-large {
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    margin-top: clamp(30px, 14vw, 60px);
   }
 }

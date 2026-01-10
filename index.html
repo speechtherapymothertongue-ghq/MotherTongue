@@ -50,6 +50,7 @@
     </nav>
 
     <section class="hero", id="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-inner">
         <div class="hero-content">
             <h1>Because We Speak Better<br> <span class="highlight">in Mother Tongue</span></h1>
@@ -680,7 +681,7 @@
     let audioUnlocked = false;
 
     // Show unmute hint once video is playing
-    video.addEventListener("play", () => {
+    video.addEventListener("play", () => { 
         if (!audioUnlocked) {
         document.querySelector(".video-wrap").classList.add("show-unmute");
         }
