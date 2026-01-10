@@ -21,16 +21,20 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <title>MotherTongue - Nurturing Speech & Language Development</title>
+    <title>MotherTongue Speech - Online Speech Therapy</title>
     
 </head>
 <body>
+    <button id="scrollBtn" class="btn btn-float">Talk to a therapist😊</button>
     <nav class="nav">
 
         <div class="nav-container">
         <div class="logo-container">
-            <div class="logo">💕 MotherTongue Speech</div>
-            <div class="logo-tagline">ONLINE SPEECH THERAPY</div>
+            <!-- <div class="logo">💕 MotherTongue Speech</div>
+            <div class="logo-tagline">ONLINE SPEECH THERAPY</div> -->
+            <img src="images/banner/logo_nobg.png" alt="MotherTongue Speech" class="logo-img"/>
+            <img src="images/banner/title.png" alt="MotherTongue Speech" class="logo-img"/>
+            
         </div>
             <div class="nav-links">
                 <a href="#hero">Home</a>
@@ -38,12 +42,14 @@
                 <a href="#approach">Our Approach</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#expert">Our Experts</a>
-                <a class="btn" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">Talk to a therapist</a>
+                <a href="#contribution">Contributions</a>
+                <!-- <a class="btn" onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">Talk to a therapist</a> -->
               </div>   
         </div>
     </nav>
 
     <section class="hero", id="hero">
+        <div class="hero-inner">
         <div class="hero-content">
             <h1>Because We Speak Better<br> <span class="highlight">in Mother Tongue</span></h1>
             <p>Everyone deserves to be understood in the <b>language of home</b>. Our online sessions in your loved one's mother tongue help them speak clearly, confidently, and with joy — so they can shine in school, at home, and in life.</p>
@@ -58,6 +64,7 @@
                     <h2>👨‍👩‍👧 Who needs speech therapy?</h2>
                     <label><input type="checkbox" name="person" value="Child"> My child</label>
                     <label><input type="checkbox" name="person" value="Adult"> An adult in our family</label>
+                    <label><input type="checkbox" name="person" value="Adult"> We need parent counselling</label>
                     <div class="form-buttons">
                         <button type="button" class="btn" onclick="nextStep(1)">Continue</button>
                     </div>
@@ -103,7 +110,8 @@
                             <option value="+61">AU +61</option>
                             <option value="+61">UAE +971</option>
                         </select>
-                        <input type="tel" name="phone" id="phoneNumber" placeholder="Your phone number" required pattern="[0-9]{10}">
+                        <input type="tel" name="phone" id="phoneNumber" placeholder="Your WhatsApp number" required pattern="[0-9]{10}" inputmode="numeric" autocomplete="tel-national"
+/>
                     </div>
                     <div class="form-buttons">
                         <button type="button" class="btn prev-btn" onclick="prevStep(4)">Back</button>
@@ -121,6 +129,7 @@
                     </div>
                 </div>
             </form>
+            </div>
         </div>
     </section>
 
@@ -136,6 +145,19 @@
 
 
     <script>
+        const scrollBtn = document.getElementById("scrollBtn");
+
+        window.addEventListener("scroll", () => {
+        scrollBtn.style.display = window.scrollY > window.innerHeight * 0.6 ? "block" : "none";
+        });
+
+        scrollBtn.addEventListener("click", () => {
+        document.querySelector("#hero").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+        });
+
         let currentStep = 1;
         // Show only the current step
         function showStep(step) {
@@ -161,9 +183,6 @@
         });
 
         // Close form when clicking outside the form container
-        window.addEventListener("click", function (e) {
-        const formContainer = popup.querySelector(".form-container");
-        });
         function resetTherapyForm() {
         const form = document.getElementById("therapyForm");
 
@@ -251,17 +270,17 @@
         }
         const video = document.getElementById('therapyVideo');
 
-        video.addEventListener('click', () => {
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen(); // Safari
-        } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen(); // IE
-        }
+        // video.addEventListener('click', () => {
+        // if (video.requestFullscreen) {
+        //     video.requestFullscreen();
+        // } else if (video.webkitRequestFullscreen) {
+        //     video.webkitRequestFullscreen(); // Safari
+        // } else if (video.msRequestFullscreen) {
+        //     video.msRequestFullscreen(); // IE
+        // }
 
-        video.play();
-        });
+        // video.play();
+        // });
         function setCurrency(currency) {
     // All supported currencies
     const currencies = ['inr', 'usd', 'aed'];
@@ -286,31 +305,12 @@
 
 
     </script>
-    <div class="trust-bar">
-        <div class="trust-container">
-            <div class="trust-item">
-                <span class="trust-number">500+</span>
-                <span class="trust-label">Families We've Supported</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">15+</span>
-                <span class="trust-label">Languages We Honor</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">10</span>
-                <span class="trust-label">Years of Caring</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">98%</span>
-                <span class="trust-label">Happy Families</span>
-            </div>
-        </div>
-    </div>
+
 
     <section class="how-it-works" id="how">
         <div class="how-container">
             <div class="how-header"  >
-                <h2>How Mother Tongue Works 💕</h2>
+                <h2>How MotherTongue Speech Works 💕</h2>
                 <p>Simple, effective online therapy designed for busy families</p>
             </div>
 
@@ -336,19 +336,19 @@
                 <div class="step-card">
                     <div class="step-number">4</div>
                     <h3>💻 Online Sessions</h3>
-                    <p>30-minute interactive video sessions, 2-3 times per week, at your convenience</p>
+                    <p>45-minute interactive video sessions, 2-3 times per week, at your convenience</p>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">5</div>
-                    <h3>📈 Progress Tracking</h3>
-                    <p>Weekly reports and milestone updates so you can see your child's improvement</p>
+                    <h3>🏡 Guardian Counselling</h3>
+                    <p>Giving the essential guidance to the guardians at each milestone. Helping you turn everyday moments into life-changing progress.</p>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">6</div>
-                    <h3>🏡 Home Activities</h3>
-                    <p>Fun practice exercises and games to reinforce learning between sessions</p>
+                    <h3>📈 Progress Tracking</h3>
+                    <p>Monthly progress reports and milestone updates to keep track of your progress </p>
                 </div>
             </div>
         </div>
@@ -373,7 +373,7 @@
     <section class="pricing-comparison" id="pricing">
         <div class="pricing-container">
             <div class="section-header">
-                <h2>Why Families Choose MotherTongue 💰</h2>
+                <h2>Why Families Choose MotherTongue Speech 💰</h2>
                 <p>Quality speech therapy shouldn't break the bank. See how we compare to traditional offline therapy.</p>
                 
                 <!-- Currency Toggle -->
@@ -405,7 +405,7 @@
                         </div>
                         <div class="extra-costs">+ Travel costs + Parking</div>
                     </div>
-                    <div class="comparison-box online" onclick="openPopupForm()">
+                    <div class="comparison-box online"  onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">
                         <span class="icon-badge tick">✓</span>
                         <div class="badge-ribbon">Best Value</div>
                         <div class="label">Mother Tongue Online</div>
@@ -431,10 +431,10 @@
                         <div class="value">Fixed Schedule + 1-2 hrs Travel</div>
                         <div class="extra-costs">Rush hour traffic stress</div>
                     </div>
-                    <div class="comparison-box online" onclick="openPopupForm()">
+                    <div class="comparison-box online"  onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">
                         <span class="icon-badge tick">✓</span>
                         <div class="label">Mother Tongue Online</div>
-                        <div class="value highlight">60 mins • Zero Travel</div>
+                        <div class="value highlight">45 mins • Zero Travel</div>
                         <div class="savings">From your home comfort!</div>
                     </div>
                 </div>
@@ -447,7 +447,7 @@
                         <div class="value">Clinic Hours Only (9 AM - 6 PM)</div>
                         <div class="extra-costs">Miss work or school</div>
                     </div>
-                    <div class="comparison-box online" onclick="openPopupForm()">
+                    <div class="comparison-box online"  onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">
                         <span class="icon-badge tick">✓</span>
                         <div class="label">Mother Tongue Online</div>
                         <div class="value highlight">Flexible Evenings & Weekends</div>
@@ -463,7 +463,7 @@
                         <div class="value">Limited Mother Tongue Therapists</div>
                         <div class="extra-costs">Hard to find Hindi speakers</div>
                     </div>
-                    <div class="comparison-box online" onclick="openPopupForm()">
+                    <div class="comparison-box online"  onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">
                         <span class="icon-badge tick">✓</span>
                         <div class="label">Mother Tongue Online</div>
                         <div class="value highlight">Specialized Hindi & English Experts</div>
@@ -479,7 +479,7 @@
                         <div class="value">Parents Wait Outside</div>
                         <div class="extra-costs">Limited insight into progress</div>
                     </div>
-                    <div class="comparison-box online" onclick="openPopupForm()">
+                    <div class="comparison-box online"  onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">
                         <span class="icon-badge tick">✓</span>
                         <div class="label">Mother Tongue Online</div>
                         <div class="value highlight">Parents Actively Participate</div>
@@ -495,7 +495,7 @@
                         <div class="value">Support During Sessions Only</div>
                         <div class="extra-costs">No follow-up between visits</div>
                     </div>
-                    <div class="comparison-box online" onclick="openPopupForm()">
+                    <div class="comparison-box online"  onclick="document.querySelector('#hero').scrollIntoView({ behavior: 'smooth' });">
                         <span class="icon-badge tick">✓</span>
                         <div class="label">Mother Tongue Online</div>
                         <div class="value highlight">Chat Support Between Sessions</div>
@@ -553,6 +553,26 @@
 </section>
 
 </section>
+    <section class="trust-bar" id="contribution">
+        <div class="trust-container">
+            <div class="trust-item">
+                <span class="trust-number">500+</span>
+                <span class="trust-label">Families We've Supported</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">3+</span>
+                <span class="trust-label">Languages We Honor</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">8+</span>
+                <span class="trust-label">Years of Caring</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-number">98%</span>
+                <span class="trust-label">Happy Families</span>
+            </div>
+        </div>
+    </section>
     <section class="final-cta">
         <h2>Let's Give Our Loved One's The Therapy They Deserve 💕</h2>
         <p>Every conversation begins with a single word. Let's start yours today—we're here to listen, support, and celebrate your journey.</p>
@@ -569,25 +589,23 @@
                 <h4>Our Services</h4>
                 <a href="#">Speech Therapy</a>
                 <a href="#">Assessments</a>
-                <a href="#">Family Coaching</a>
+                <a href="#">Family Coaching & Counselling</a>
                 <a href="#">Parent Workshops</a>
             </div>
-            <div class="footer-section">
+            <!-- <div class="footer-section">
                 <h4>Resources</h4>
                 <a href="#">Parent Guides</a>
                 <a href="#">Blog & Stories</a>
                 <a href="#">Common Questions</a>
                 <a href="#">Research & Insights</a>
-            </div>
+            </div> -->
             <div class="footer-section">
                 <h4>Connect With Us</h4>
-                <a href="mailto:hello@MotherTongue.com">hello@MotherTongue.com</a>
-                <a href="tel:5551234567">(555) 123-4567</a>
-                <a href="#">Find Our Locations</a>
+                <a href="mailto:speechtherapy.mothertongue@gmail.com">speechtherapy.mothertongue@gmail.com</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 MotherTongue. Caring for children's voices with professional expertise and endless heart.</p>
+            <p>© 2026 MotherTongue Speech. Online Speech Therapy. From babbles to brilliant.</p>
         </div>
     </footer>
 
