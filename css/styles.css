@@ -810,6 +810,21 @@ footer {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  /* gap: 12px; */
+  flex-wrap: nowrap;
+}
+
+.footer-logo {
+  height: clamp(36px, 6vw, 52px);
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  margin:0 0 13px;
+}
+
 
 .footer-desc {
     color: #d1c4c4;
