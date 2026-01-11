@@ -59,14 +59,20 @@
         
 
         <div class="hero-form-card">
-            <h4>🌸 Let's Begin Your Journey</h4>
+            
             <form id="therapyForm">
                 <!-- Step 1 -->
                 <div class="form-step active" id="step1">
-                    <h2>👨‍👩‍👧 Who needs speech therapy?</h2>
-                    <label><input type="checkbox" name="person" value="Child"> My child</label>
-                    <label><input type="checkbox" name="person" value="Adult"> An adult in our family</label>
-                    <label><input type="checkbox" name="person" value="Adult"> We need parent counselling</label>
+                    <h3>🌸 Who would you like us to support?</h3>
+                    <label><input type="checkbox" name="person" value="Child">
+                    My child who may need a little extra support</label>
+
+                    <label><input type="checkbox" name="person" value="Adult">
+                    An adult in our family seeking speech support</label>
+
+                    <label><input type="checkbox" name="person" value="Counselling">
+                    I'm looking for parent guidance and counselling</label>
+
                     <div class="form-buttons">
                         <button type="button" class="btn" onclick="nextStep(1)">Continue</button>
                     </div>
@@ -74,16 +80,32 @@
                 
                 <!-- Step 2 -->
                 <div class="form-step" id="step2">
-                    <h2>💭 What brings you here today?</h2>
-                    <label><input type="checkbox" name="therapy" value="Unclear speech"> Unclear speech</label>
-                    <label><input type="checkbox" name="therapy" value="Stammering"> Stammering</label>
-                    <label><input type="checkbox" name="therapy" value="Fast speech"> Fast speech</label>
-                    <label><input type="checkbox" name="therapy" value="Speech delay"> Speech delay</label>
-                    <label><input type="checkbox" name="therapy" value="ADHD"> ADHD</label>
-                    <label><input type="checkbox" name="therapy" value="ASD"> Autism Spectrum Disorder</label>
-                    <!-- <label><input type="checkbox" name="therapy" value="Stroke/Trauma injury"> Stroke or injury recovery</label> -->
-                    <label><input type="checkbox" name="therapy" value="Developmental delay"> Developmental concerns</label>
-                    <label><input type="checkbox" name="therapy" value="Reading/Writing difficulty"> Reading or writing challenges</label>
+                    <h3>💗 What concerns would you like to talk about?</h3>
+                    <p class="form-subtext">You can choose all that feel relevant. There's no wrong answer.</p>
+                    <label><input type="checkbox" name="therapy" value="Unclear speech">
+                    Speech is not very clear yet</label>
+
+                    <label><input type="checkbox" name="therapy" value="Stammering">
+                    Gets stuck or repeats while speaking</label>
+
+                    <label><input type="checkbox" name="therapy" value="Fast speech">
+                    Speaks too fast to be easily understood</label>
+
+                    <label><input type="checkbox" name="therapy" value="Speech delay">
+                    Not speaking as much as expected for their age</label>
+
+                    <label><input type="checkbox" name="therapy" value="ADHD">
+                    Attention or focus related concerns</label>
+
+                    <label><input type="checkbox" name="therapy" value="ASD">
+                    Autism spectrum related concerns</label>
+
+                    <label><input type="checkbox" name="therapy" value="Developmental delay">
+                    General developmental concerns</label>
+
+                    <label><input type="checkbox" name="therapy" value="Reading/Writing difficulty">
+                    Reading or writing feels difficult</label>
+
                     <div class="form-buttons">
                         <button type="button" class="btn prev-btn" onclick="prevStep(2)">Back</button>
                         <button type="button" class="btn" onclick="nextStep(2)">Continue</button>
@@ -92,10 +114,12 @@
                 
                 <!-- Step 3 -->
                 <div class="form-step" id="step3">
-                    <h2>🌐 Your home language</h2>
+                    <h3>🌍 Which language feels most comfortable at home?</h3>
+                    <p class="form-subtext">We offer therapy in the language your family feels safest in.</p>
                     <label><input type="checkbox" name="language" value="Hindi"> Hindi</label>
                     <label><input type="checkbox" name="language" value="English"> English</label>
-                    <label><input type="checkbox" name="language" value="Other"> Other (we'll discuss)</label>
+                    <label><input type="checkbox" name="language" value="Other"> Another language/Multilingual (we'll discuss together)</label>
+
                     <div class="form-buttons">
                         <button type="button" class="btn prev-btn" onclick="prevStep(3)">Back</button>
                         <button type="button" class="btn" onclick="nextStep(3)">Continue</button>
@@ -104,7 +128,9 @@
                 
                 <!-- Step 4 -->
                 <div class="form-step" id="step4">
-                    <h2>📱 How can we reach you?</h2>
+                    <h3>📱 Where can we reach out to you?</h3>
+                    <p class="form-subtext">We'll message you on WhatsApp to schedule your free consultation.</p>
+
                     <div class="phone-input-group">
                         <select id="countryCode" name="countryCode" required>
                             <option value="+91">IN +91</option>
@@ -114,7 +140,7 @@
                             <option value="+61">AU +61</option>
                             <option value="+61">UAE +971</option>
                         </select>
-                        <input type="tel" name="phone" id="phoneNumber" placeholder="Your WhatsApp number" required pattern="[0-9]{10}" inputmode="numeric" autocomplete="tel-national"
+                        <input type="tel" name="phone" id="phoneNumber" placeholder="Your WhatsApp number (we respect your privacy)" required pattern="[0-9]{10}" inputmode="numeric" autocomplete="tel-national"
 />
                     </div>
                     <div class="form-buttons">
@@ -125,8 +151,8 @@
                 
                 <!-- Final Submit -->
                 <div class="form-step" id="submitStep">
-                    <h2>✨ Ready to connect via WhatsApp!</h2>
-                    <p style="margin-bottom: 20px; color: #6b5555; line-height: 1.7;">We'll review your information and reach out soon using WhatsApp to schedule a warm conversation about how we can support your family.</p>
+                <h3>✨ We're ready to walk this journey with you</h3>
+                <p>Thank you for sharing. One of our therapists will reach out on WhatsApp to gently understand your concerns and guide you through next steps.</p>
                     <div class="form-buttons">
                         <button type="button" class="btn prev-btn" onclick="prevStep(5)">Back</button>
                         <button type="submit" class="btn">Send My Request 💕</button>
