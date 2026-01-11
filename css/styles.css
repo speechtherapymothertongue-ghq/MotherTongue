@@ -825,6 +825,20 @@ footer {
   margin:0 0 13px;
 }
 
+@media (max-width: 680px) {
+
+  .footer-brand-row {
+    justify-content: center !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+}
 
 .footer-desc {
     color: #d1c4c4;
