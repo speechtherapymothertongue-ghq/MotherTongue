@@ -1,58 +1,62 @@
-# MotherTongue
-🌸 MotherTongue Speech
+# 🌸 MotherTongue Speech
 
-Online Speech Therapy in the Language of Home
+**MotherTongue Speech** is an online speech therapy platform dedicated to helping children, adults, and multilingual families communicate with clarity, confidence, and comfort — in the language of home.
 
-Because we speak better in our mother tongue.
+We specialize in delivering culturally sensitive, personalized online speech and language therapy in multiple Indian and global languages.
 
-MotherTongue Speech is an online speech and language therapy platform created to support children, adults, and multilingual families around the world.
-We provide personalised therapy in the language families are most comfortable in, helping communication grow naturally, confidently, and with care.
+---
 
-🌍 Serving families in India, USA, UAE, and globally
+## 🌍 What We Do
 
-🌼 What We Do
+MotherTongue Speech provides:
 
-We offer online speech and language therapy for:
+- Online Speech & Language Therapy  
+- Multilingual and Mother-Tongue Based Therapy  
+- Support for Children, Teens, Adults & Seniors  
+- Parent Coaching & Family Guidance  
+- Stammering / Stuttering Support  
+- Speech Delay & Language Development Programs  
+- Accent & Confidence Building  
+- Therapy for Neurodivergent Individuals (ASD, ADHD, etc.)
 
-Speech delay
+---
 
-Stammering / stuttering
+## 🧠 Why Mother Tongue Matters
 
-Late talking
+Research shows that children and adults make faster and deeper progress when therapy is delivered in the language they are emotionally and culturally connected to.  
+We believe communication grows best in the language of comfort — the language of home.
 
-Articulation difficulties
+---
 
-Autism Spectrum (ASD) communication support
 
-ADHD related speech challenges
+---
 
-Reading & writing difficulties
+## 📲 Instagram
 
-Adult speech recovery and confidence building
+Follow us for education, awareness, and therapy tips:  
+https://www.instagram.com/mothertongue_speechtherapy
 
-Parent counselling and home language guidance
+---
 
-All sessions are conducted online, making therapy accessible from the comfort of home.
+## 📞 Free Consultation
 
-💗 Why MotherTongue?
+We offer a **free 15-minute consultation** to understand your concerns and guide you to the right support.
 
-Therapy in your home language
+---
 
-Experienced certified therapists
+## 🛠️ Tech Stack
 
-Flexible timings (evenings & weekends)
+- HTML  
+- CSS  
+- JavaScript  
+- GitHub Pages Hosting  
+- AWS Lambda (Backend Services)  
+- Telegram & WhatsApp API Integrations  
 
-Zero travel stress
+---
 
-Affordable global pricing
+## 🚀 Getting Started (Developers)
 
-WhatsApp support between sessions
-
-Parent-inclusive therapy model
-
-We believe real progress begins when therapy feels safe, familiar, and human.
-
-✨ Free 15-Minute Consultation
-
-Not sure where to start?
-We offer a free 15-minute consultation with our therapist to understand your needs and guide you forward.
+1. Clone the repository  
+```bash
+git clone https://github.com/your-org/MotherTongue.git
