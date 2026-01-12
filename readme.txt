@@ -1,32 +1,78 @@
-Bootstrap/HTML5 Responsive Template 
+🌸 MotherTongue Speech
 
-Add Life Health Fitness Free Bootstrap HTML5 Template is a simple elegant designed HTML5 Bootstrap template suits for Health and fitness industry. This can be also fits to  other types of health care business, Gym studio, Arerobics, sports, consultancy, portfolio and many more. This template is built using latest Bootstrap framework with html5 and css3 which is very easy to customise the theme as per your requirements. This template designed with height quality standards. This a responsive template fits in all devices with multi browser support. Download for free.  
+Online Speech Therapy in the Language of Home
 
-Credits :
--------
-=> Design and developed: "WebThemez"  http://webthemez.com
-=> Photos used in template: **Unsplash** - http://unsplash.com
-=> For more free web themes: http://webthemez.com
-=> Framework : http://getbootstrap.com
+Because we speak better in our mother tongue.
 
-Important Note:
----------------
-To remove backlink from the template, you need to donate to remove the backlink from the template.
-Any question contact us: webthemez@gmail.com
+MotherTongue Speech is an online speech and language therapy platform created to support children, adults, and multilingual families around the world.
+We provide personalised therapy in the language families are most comfortable in, helping communication grow naturally, confidently, and with care.
 
+🌍 Serving families in India, USA, UAE, and globally
 
-License :
--------
-**Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
+🌼 What We Do
 
-- You are allowed to use all files for both personal and commercial projects.
+We offer online speech and language therapy for:
 
-- If you use/modify the resources in your projects,we�d appreciate a linkback to this site.
+Speech delay
 
-- You do not have rights to redistribute,resell or offer files from this site to any third party
+Stammering / stuttering
 
-- If you wish to remove backlink from the template, you need to donate min USD $10 to remove backlink (credits) form the template
+Late talking
 
-- If you have any question,feel free to contact us at webthemez@gmail.com
+Articulation difficulties
 
-- All images user here is for demo purpose only, we are not responsible for any copyrights.
+Autism Spectrum (ASD) communication support
+
+ADHD related speech challenges
+
+Reading & writing difficulties
+
+Adult speech recovery and confidence building
+
+Parent counselling and home language guidance
+
+All sessions are conducted online, making therapy accessible from the comfort of home.
+
+💗 Why MotherTongue?
+
+Therapy in your home language
+
+Experienced certified therapists
+
+Flexible timings (evenings & weekends)
+
+Zero travel stress
+
+Affordable global pricing
+
+WhatsApp support between sessions
+
+Parent-inclusive therapy model
+
+We believe real progress begins when therapy feels safe, familiar, and human.
+
+✨ Free 15-Minute Consultation
+
+Not sure where to start?
+We offer a free 15-minute consultation with our therapist to understand your needs and guide you forward.
+
+👉 Book here:
+Website: https://aaditya207.github.io/MotherTongue/
+
+Instagram: https://www.instagram.com/mothertongue_speechtherapy
+
+🛠 Tech Stack
+
+HTML, CSS, JavaScript
+
+AWS Lambda + API Gateway
+
+CloudFront CDN
+
+Telegram & WhatsApp integrations
+
+GitHub Pages hosting
+
+🚀 Deployment
+
+This site is deployed using GitHub Pages under the MotherTongue Speech brand account.
