@@ -322,6 +322,9 @@
                     <button class="currency-btn" onclick="setCurrency('aed')" id="btnAED">
                         <span class="flag"></span>AED (د.إ)
                     </button>
+                    <button class="currency-btn" onclick="setCurrency('yen')" id="btnYEN">
+                        <span class="flag"></span>YEN (¥)
+                    </button>
                 </div>
             </div>
 
@@ -336,6 +339,7 @@
                             <span class="price-inr"><span class="currency">₹</span>2,500<span class="per">/session</span></span>
                             <span class="price-usd" style="display:none;"><span class="currency">$</span>100<span class="per">/session</span></span>
                             <span class="price-aed" style="display:none;">300 <span class="currency">AED</span><span class="per">/session</span></span>
+                            <span class="price-yen" style="display:none;">14,000 <span class="currency">¥</span><span class="per">/session</span></span>
 
                         </div>
                         <div class="extra-costs">+ Travel costs + Parking</div>
@@ -348,12 +352,14 @@
                             <span class="price-inr"><span class="currency">₹</span>1500<span class="per">/session</span></span>
                             <span class="price-usd" style="display:none;"><span class="currency">$</span>30<span class="per">/session</span></span>
                             <span class="price-aed" style="display:none;">100 <span class="currency">AED</span><span class="per">/session</span></span>
+                            <span class="price-yen" style="display:none;">5,000 <span class="currency">¥</span><span class="per">/session</span></span>
 
                         </div>
                         <div class="savings">
                             <span class="price-inr">Save more than ₹1,000 per session!</span>
                             <span class="price-usd" style="display:none;">Save more than $70 per session!</span>
                             <span class="price-aed" style="display:none;">Save more than 200 AED per session!</span>
+                            <span class="price-yen" style="display:none;">Save more than 9,000 ¥ per session!</span>
                         </div>
                     </div>
                 </div>
@@ -681,7 +687,7 @@
 
         function setCurrency(currency) {
     // All supported currencies
-        const currencies = ['inr', 'usd', 'aed'];
+        const currencies = ['inr', 'usd', 'aed','yen'];
 
         // 1. Toggle price visibility
         currencies.forEach(curr => {
